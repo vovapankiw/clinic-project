@@ -6,10 +6,6 @@
     <div
       class="home__quotes"
     >
-      <!--<blockquote class="brooks">-->
-        <!--Дев’ять десятих нашого щастя залежить від здоров’я. (Артур Шопенгауер)-->
-      <!--</blockquote>-->
-
       <blockquote class="groucho">
         Дев’ять десятих нашого щастя залежить від здоров’я.
         <footer>Артур Шопенгауер</footer>
