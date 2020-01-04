@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Home from '../components/Home'
-import News from '../components/News'
+import Home from '../components/Home';
+import News from '../components/News';
 
 export default {
   components: {
