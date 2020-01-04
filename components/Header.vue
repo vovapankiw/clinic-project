@@ -6,18 +6,22 @@
       fixed
       height="88px"
     >
-      <v-app-bar-nav-icon v-show="false"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown" />
       <img
         class="navbar__logo"
         src="~assets/logo.png"
       >
       <v-spacer></v-spacer>
 
-      <header-option
-        v-for="(item, i) in items"
-        :key="i"
-        :item="item"
-      ></header-option>
+      <div
+        v-if="$vuetify.breakpoint.mdAndUp"
+      >
+        <header-option
+          v-for="(item, i) in items"
+          :key="i"
+          :item="item"
+        />
+      </div>
 
       <v-spacer></v-spacer>
 

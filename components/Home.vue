@@ -6,7 +6,9 @@
     <div
       class="home__quotes"
     >
-      <blockquote class="groucho">
+      <blockquote
+        class="groucho"
+      >
         Дев’ять десятих нашого щастя залежить від здоров’я.
         <footer>Артур Шопенгауер</footer>
       </blockquote>
@@ -34,7 +36,7 @@
   .home__wrapper {
     height: 100vh;
     background: hsl(50, 5, 97);
-    color: hsl(200, 40, 40);;
+    color: cadetblue;
   }
   .home__quotes{
     height: 20%;
@@ -59,11 +61,21 @@
     width: 100%;
     align-items: center;
 
+    @media only screen and (max-width: 1264px) {
+      font-size: 1.8em;
+    }
+
+    @media only screen and (max-width: 964px) {
+      overflow-wrap: break-word;
+      font-size: 1.6em;
+    }
+
     footer {
       font-family: 'Noto Sans', sans-serif;
       font-size: 0.6em;
       font-weight: 700;
-      color: darken($white, 15%);
+
+      color: cadetblue;
       align-self: flex-end;
       &:before {
         content: '\2015';
@@ -76,7 +88,16 @@
       right: 10%;
       font-size: 6em;
       font-style: italic;
-      color: darken($white, 7%);
+      color: cadetblue;
+
+      @media only screen and (max-width: 964px) {
+        right: 0;
+      }
+
+      @media only screen and (max-width: 964px) {
+        right: -3%;
+        font-size: 4em;
+      }
     }
   }
 </style>
