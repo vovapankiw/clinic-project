@@ -11,8 +11,8 @@
       class="photo-banner__title__wrapper"
     >
       <div>
-        <v-btn depressed large color="primary" min-width="192px" class="photo-banner__btn">038-48-715</v-btn>
-        <v-btn depressed large color="accent" class="photo-banner__btn">Зареєструватися</v-btn>
+        <v-btn depressed large color="primary" min-width="192px" class="photo-banner__btn my-1">038-48-715</v-btn>
+        <v-btn depressed large color="accent" class="photo-banner__btn my-1">Зареєструватися</v-btn>
       </div>
       <span
       class="photo-banner__title"
@@ -42,6 +42,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      div {
+        text-align: center;
+      }
     }
 
     &__image {
