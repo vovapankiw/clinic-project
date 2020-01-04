@@ -53,9 +53,13 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .news__wrapper {
-    padding: 50px 15px;
+    padding: 25px 15px;
+
+    @media only screen and (max-width: 964px) {
+      padding: 0 15px;
+    }
   }
   .news__title {
     text-align: center;

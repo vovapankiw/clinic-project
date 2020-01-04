@@ -2,7 +2,6 @@
   <div>
     <home />
     <news />
-
   </div>
 </template>
 
