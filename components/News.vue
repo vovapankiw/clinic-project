@@ -62,7 +62,12 @@
     }
   }
   .news__title {
+    color: #4496d4;
+    font-size: 30pt;
+    font-family: open_sanslight;
+    line-height: 130%;
     text-align: center;
+    padding: 15px;
   }
 
   .news-card__container {
