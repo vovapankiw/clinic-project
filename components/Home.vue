@@ -2,7 +2,12 @@
   <div
     class="home__wrapper"
   >
-    <photo-banner />
+    <photo-banner
+      :title="'Гніздичівська АЗПСМ'"
+      :src="require(`~/assets/header.jpg`)"
+      :alt="'гнізідичівська поліклініка'"
+      :show-btns="true"
+    />
     <div
       class="home__quotes"
     >
@@ -28,7 +33,7 @@
 </script>
 
 <style lang="scss" scoped>
-  /* Some generic stuff. Don't worry about it */
+  /* Some generic stuff. Don't worry staff it */
   @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700),
   url(https://fonts.googleapis.com/css?family=Sanchez:400italic,400),
   url(https://fonts.googleapis.com/css?family=Roboto:100);

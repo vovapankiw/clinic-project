@@ -8,12 +8,16 @@
         v-on="on"
         text
         large
+        :to="item.link"
+        :nuxt="true"
       >
         {{  item.title }}
       </v-btn>
     </template>
 
-    <v-list>
+    <v-list
+      v-if="item.options.length"
+    >
       <v-list-item
         v-for="n in 5"
         :key="n"

@@ -3,29 +3,75 @@
     class="photo-banner"
   >
     <img
-      src="~assets/header.jpg"
-      alt="гнізідичівська поліклініка"
+      :src="src"
+      :alt="alt"
       class="photo-banner__image"
     >
     <div
       class="photo-banner__title__wrapper"
     >
-      <div>
+      <div v-if="showBtns">
         <v-btn depressed large color="primary" min-width="192px" class="photo-banner__btn my-1">038-48-715</v-btn>
-        <v-btn depressed large color="accent" class="photo-banner__btn my-1">Зареєструватися</v-btn>
+        <v-btn
+          depressed
+          large
+          color="accent"
+          class="photo-banner__btn my-1"
+          @click="showSchedule"
+        >
+          Графік роботи
+        </v-btn>
       </div>
       <span
       class="photo-banner__title"
       >
-        Гніздичівська АЗПСМ
+        {{ title }}
       </span>
     </div>
+
+    <schedule
+      :isScheduleVisible="isScheduleVisible"
+      @hideDialog="showSchedule"
+    />
   </div>
 </template>
 
 <script>
+  import Schedule from  './Schedule';
+
   export default {
-    name: "PhotoBanner"
+    name: "PhotoBanner",
+    components: {
+      Schedule,
+    },
+    props: {
+      title: {
+        type: String,
+        required: true,
+      },
+      src: {
+        type: String,
+        required: true,
+      },
+      alt: {
+        type: String,
+        default: 'фото'
+      },
+      showBtns: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    data() {
+      return {
+        isScheduleVisible: false,
+      }
+    },
+    methods: {
+      showSchedule() {
+        this.isScheduleVisible = !this.isScheduleVisible;
+      }
+    }
   }
 </script>
 
@@ -33,6 +79,7 @@
   .photo-banner {
     position: relative;
     height: 507px;
+    background-color: rgb(245, 249, 249);
 
     &__title__wrapper {
       position: absolute;
@@ -52,6 +99,7 @@
       width: 100%;
       height: 507px;
       object-fit: cover;
+      padding: 25px;
       filter: brightness(65%);
     }
 

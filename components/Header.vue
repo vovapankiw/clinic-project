@@ -42,11 +42,31 @@
       return {
         drawer: null,
         items: [
-          { title: 'Головна', icon: 'dashboard' },
-          { title: 'Персонал', icon: 'question_answer' },
-          { title: 'Послуги', icon: 'question_answer' },
-          { title: 'Новини', icon: 'question_answer' },
-          { title: 'Контакти', icon: 'question_answer' },
+          {
+            title: 'Головна',
+            link: '/',
+            options: []
+          },
+          {
+            title: 'Персонал',
+            link: '/staff',
+            options: []
+          },
+          {
+            title: 'Послуги',
+            link: 'question_answer',
+            options: []
+          },
+          {
+            title: 'Новини',
+            link: 'question_answer',
+            options: []
+          },
+          {
+            title: 'Контакти',
+            link: '/contacts',
+            options: []
+          },
         ],
         dataInfo: [
           'смт.Гніздичів','вул.Грушевського 112', '(032)-48-018', 'hnyzclinic@gmail.com'
