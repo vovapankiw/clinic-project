@@ -59,7 +59,7 @@
           },
           {
             title: 'Новини',
-            link: 'question_answer',
+            link: '/news',
             options: []
           },
           {

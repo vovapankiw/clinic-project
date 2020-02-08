@@ -42,7 +42,14 @@ export default {
   */
   modules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    credentials: false,
+  },
+
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

@@ -1,25 +1,32 @@
 <template>
   <v-card
     class="mx-auto my-5"
-    max-width="400"
-    height="400"
+    :max-width="size === 'normal' ? 400 : 200"
+    :max-height="size === 'normal' ? 430 : 210"
   >
     <img
-      class="news_card__img"
+      :class="[size === 'normal' ? 'news_card__img-normal' : 'news_card__img-mini', 'news_card__img']"
       :src="require(`~/assets/${news.img}.jpg`)"
     >
-      <v-card-title class="news_card__title">{{ news.title }}</v-card-title>
+    <v-card-title
+      :class="[size === 'normal' ? 'news_card__title-normal' : 'news_card__title-mini', 'news_card__title']"
+    >
+      {{ news.title }}
+    </v-card-title>
 
-    <v-card-subtitle class="pb-0">{{ news.date }}</v-card-subtitle>
+    <template v-if="size === 'normal'">
+      <v-card-subtitle class="pb-0">{{ news.date }}</v-card-subtitle>
 
-    <v-card-text class="text--primary pb-0">
-      <div>{{ news.text }}</div>
-    </v-card-text>
+      <v-card-text class="text--primary pb-0">
+        <div>{{ news.text }}</div>
+      </v-card-text>
+    </template>
 
     <v-card-actions>
       <v-btn
         color="orange"
         text
+        @click="openNews(news.id)"
       >
         Прочитати
       </v-btn>
@@ -34,23 +41,53 @@
       news: {
         type: Object,
         required: true,
+      },
+      size: {
+        type: String,
+        default: 'normal',
+      }
+    },
+    methods: {
+      openNews(id) {
+        this.$router.push({
+          path:`/news/${id}`,
+          params: {
+            id
+          }
+        });
       }
     }
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .news_card__img {
-    width: 100%;
-    height: 250px;
-    margin-bottom: 2rem;
     object-fit: cover;
     filter: brightness(55%);
+
+    &-normal {
+       width: 100%;
+       height: 250px;
+       margin-bottom: 2rem;
+     }
+
+     &-mini {
+       width: 100%;
+       height: 150px;
+      }
   }
 
   .news_card__title {
     position: absolute;
-    top: 45%;
     color: white;
+    word-break: break-word;
+
+    &-normal {
+      top: 43%;
+    }
+
+    &-mini {
+      top: 30%;
+    }
   }
 </style>
