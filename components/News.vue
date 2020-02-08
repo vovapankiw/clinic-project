@@ -7,7 +7,7 @@
     </div>
     <div class="news-card__container">
       <news-card
-        v-for="news in newsScope"
+        v-for="news in lastNews"
         :key="news.id"
         :news="news"
       />
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   import NewsCard from './elements/NewsCard';
 
   export default {
@@ -24,30 +26,18 @@
       NewsCard,
     },
     data() {
-      return {
-        newsScope: [
-          {
-            id: 1,
-            title: 'Доступні ліки',
-            text: 'Hello, my name is Voloday, but my friends call me Vova. I am from the western part of Ukraine',
-            img: 'news_1',
-            date: '11.12.2019'
-          },
-          {
-            id: 2,
-            title: 'Апарат для аналізу крові',
-            text: 'Hello, my name is Voloday, but my friends call me Vova. I am from the western part of Ukraine',
-            img: 'news_2',
-            date: '10.10.2019'
-          },
-          {
-            id: 3,
-            title: 'Обережно грип!',
-            text: 'Hello, my name is Voloday, but my friends call me Vova. I am from the western part of Ukraine',
-            img: 'news_3',
-            date: '20.12.2019',
-          }
-        ]
+      return { }
+    },
+    computed: {
+      ...mapGetters([
+        'allNews',
+      ]),
+
+      /**
+       * Showing last news accroding order in db
+       */
+      lastNews() {
+        return this.allNews.slice(-3);
       }
     }
   }
