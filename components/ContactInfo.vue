@@ -3,21 +3,24 @@
     <v-row>
       <v-col cols="12">
         <v-row
-          class="grey lighten-5 justify-center ma-6"
+          class="grey lighten-5 justify-space-around ma-6"
         >
           <v-card
-            class="ma-3 pa-6"
+            class="mb-3 pa-2"
             outlined
             tile
             width="500"
-
           >
             <v-list>
               <v-list-item>
                 <v-list-item-icon>
                   <v-icon>mdi-home</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title class="text-center">Гніздичівська амбулаторія загальної практики <br> сімейної медицини</v-list-item-title>
+                <v-list-item-title
+                  class="text-center text-wrap"
+                >
+                  Гніздичівська амбулаторія загальної практики <br> сімейної медицини
+                </v-list-item-title>
 
               </v-list-item>
 
@@ -56,6 +59,7 @@
                   v-for="(admin, i) in admins"
                   :key="i"
                   link
+                  class="doctors__list_item"
                 >
                   <v-list-item-avatar>
                     <v-img src="https://cdn.vuetifyjs.com/images/lists/5.jpg"></v-img>
@@ -68,19 +72,20 @@
               </v-list-group>
             </v-list>
           </v-card>
+
           <v-card
-            class="ma-3 pa-6"
+            class="mb-3 pa-2"
             outlined
             tile
+            width="500px"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2599.423510658539!2d24.106500831219584!3d49.33735575499756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a64fffa408865%3A0x45f3fce20166bdb9!2sHnizdychivs%CA%B9ka%20Ambulatoriya%20Zahal%CA%B9noyi%20Praktyky-Simeynoyi%20Medytsyny!5e0!3m2!1sru!2sua!4v1578763599679!5m2!1sru!2sua"
-              width="500"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d166290.01696417408!2d24.06437!3d49.365746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45f3fce20166bdb9!2z0JPQvdGW0LfQtNC40YfRltCy0YHRjNC60LAg0LDQvNCx0YPQu9Cw0YLQvtGA0ZbRjyDQt9Cw0LPQsNC70YzQvdC-0Zcg0L_RgNCw0LrRgtC40LrQuC3RgdGW0LzQtdC50L3QvtGXINC80LXQtNC40YbQuNC90Lg!5e0!3m2!1suk!2sua!4v1581771275885!5m2!1suk!2sua"
+              width="100%"
               height="320"
               frameborder="0"
               style="border:0;"
-              allowfullscreen=""
-            />
+              allowfullscreen="" />
           </v-card>
         </v-row>
       </v-col>
@@ -103,8 +108,18 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .contact-info__container {
-      margin-top: 60px;
+    margin-top: 60px;
   }
+
+  .doctors__list_item {
+    display: flex;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+
 </style>
