@@ -6,7 +6,10 @@
       fixed
       height="88px"
     >
-      <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown" />
+      <v-app-bar-nav-icon
+        v-if="$vuetify.breakpoint.smAndDown"
+        @click.stop="showDrawer"
+      />
       <img
         class="navbar__logo"
         src="~assets/logo.png"
@@ -40,7 +43,6 @@
     },
     data() {
       return {
-        drawer: null,
         items: [
           {
             title: 'Головна',
@@ -54,7 +56,7 @@
           },
           {
             title: 'Послуги',
-            link: 'question_answer',
+            link: '/services',
             options: []
           },
           {
@@ -71,6 +73,11 @@
         dataInfo: [
           'смт.Гніздичів','вул.Грушевського 112', '(032)-48-018', 'hnyzclinic@gmail.com'
         ]
+      }
+    },
+    methods: {
+      showDrawer() {
+        this.$emit('showDrawer')
       }
     }
   }
