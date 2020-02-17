@@ -11,7 +11,15 @@
       class="photo-banner__title__wrapper"
     >
       <div v-if="showBtns">
-        <v-btn depressed large color="primary" min-width="192px" class="photo-banner__btn my-1">038-48-715</v-btn>
+        <v-btn
+          depressed
+          large
+          color="primary"
+          min-width="150px"
+          class="photo-banner__btn my-1"
+        >
+          038-48-715
+        </v-btn>
         <v-btn
           depressed
           large
@@ -92,6 +100,11 @@
 
       div {
         text-align: center;
+
+        @media only screen and (max-width: 964px) {
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
 
@@ -104,7 +117,7 @@
     }
 
     &__title {
-      padding: 10px;
+      padding: 10px 20px 10px 20px;
       text-align: center;
       text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important;
       letter-spacing: 2px !important;

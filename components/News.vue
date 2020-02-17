@@ -47,8 +47,8 @@
   .news__wrapper {
     padding: 25px 15px;
 
-    @media only screen and (max-width: 964px) {
-      padding: 0 15px;
+    @media only screen and (max-width: 350px) {
+      padding: 50px 15px;
     }
   }
   .news__title {

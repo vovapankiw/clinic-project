@@ -39,7 +39,6 @@
   url(https://fonts.googleapis.com/css?family=Roboto:100);
 
   .home__wrapper {
-    height: 100vh;
     background: hsl(50, 5, 97);
     color: cadetblue;
   }

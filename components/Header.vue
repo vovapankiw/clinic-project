@@ -14,7 +14,7 @@
         class="navbar__logo"
         src="~assets/logo.png"
       >
-      <v-spacer></v-spacer>
+      <v-spacer v-if="$vuetify.breakpoint.mdAndUp" />
 
       <div
         v-if="$vuetify.breakpoint.mdAndUp"
@@ -26,7 +26,7 @@
         />
       </div>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-btn depressed large color="primary">032-48-715</v-btn>
     </v-app-bar>
@@ -83,8 +83,12 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .navbar__logo {
     max-height: 100%;
+
+    @media only screen and (max-width: 600px) {
+      max-height: 80%;
+    }
   }
 </style>

@@ -72,7 +72,7 @@
 
     &__main {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 400px);
+      grid-template-columns: repeat(auto-fill, 350px);
       grid-gap: 15px;
       justify-content: space-around;
       justify-items: center;
