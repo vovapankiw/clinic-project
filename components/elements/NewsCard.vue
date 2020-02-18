@@ -2,7 +2,7 @@
   <v-card
     class="mx-auto my-5"
     :max-width="size === 'normal' ? 400 : 200"
-    :max-height="size === 'normal' ? 430 : 210"
+    :max-height="size === 'normal' ? 450 : 210"
   >
     <img
       :class="[size === 'normal' ? 'news_card__img-normal' : 'news_card__img-mini', 'news_card__img']"

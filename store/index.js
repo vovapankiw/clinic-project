@@ -3,6 +3,7 @@ export const state = () => ({
   news: [],
   stuff: [],
   photos: [],
+  schedule: [],
 });
 
 export const mutations = {
@@ -26,4 +27,5 @@ export const getters = {
   allNews: state => state.news,
   getStuff: state => state.stuff,
   getPhotos: state => state.photos,
+  getSchedule: state => state.schedule,
 };

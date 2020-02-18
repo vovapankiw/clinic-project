@@ -24,7 +24,7 @@
 
         <v-data-table
           :headers="headers"
-          :items="desserts"
+          :items="getSchedule"
           :items-per-page="5"
           hide-default-footer
           :hide-default-header="$vuetify.breakpoint.xs"
@@ -37,6 +37,8 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     name: "Schedule",
     props: {
@@ -62,49 +64,12 @@
           { text: 'Субота', value: 'saturday' },
           { text: 'Неділя', value: 'sunday' },
         ],
-        desserts: [
-          {
-            name: 'Паньків Д.В.',
-            monday: '9:00 - 18:00',
-            tuesday: '9:00 - 18:00',
-            wednesday: '9:00 - 18:00',
-            thursday: '9:00 - 18:00',
-            friday: '9:00 - 18:00',
-            saturday: '9:00 - 18:00',
-            sunday: '9:00 - 18:00',
-          },
-          {
-            name: 'Паньків О.Ю.',
-            monday: '9:00 - 18:00',
-            tuesday: '9:00 - 18:00',
-            wednesday: '9:00 - 18:00',
-            thursday: '9:00 - 18:00',
-            friday: '9:00 - 18:00',
-            saturday: '9:00 - 18:00',
-            sunday: '9:00 - 18:00',
-          },
-          {
-            name: 'Купець У.І.',
-            monday: '9:00 - 18:00',
-            tuesday: '9:00 - 18:00',
-            wednesday: '9:00 - 18:00',
-            thursday: '9:00 - 18:00',
-            friday: '9:00 - 18:00',
-            saturday: '9:00 - 18:00',
-            sunday: '9:00 - 18:00',
-          },
-          {
-            name: 'Гасенець Є.В.',
-            monday: '9:00 - 18:00',
-            tuesday: '9:00 - 18:00',
-            wednesday: '9:00 - 18:00',
-            thursday: '9:00 - 18:00',
-            friday: '9:00 - 18:00',
-            saturday: '9:00 - 18:00',
-            sunday: '9:00 - 18:00',
-          },
-        ],
       }
+    },
+    computed: {
+      ...mapGetters([
+        'getSchedule',
+      ]),
     },
     methods: {
       hideDialog() {
