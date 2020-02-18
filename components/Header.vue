@@ -7,17 +7,17 @@
       height="88px"
     >
       <v-app-bar-nav-icon
-        v-if="$vuetify.breakpoint.smAndDown"
+        class="d-md-none"
         @click.stop="showDrawer"
       />
       <img
         class="navbar__logo"
         src="~assets/logo.png"
       >
-      <v-spacer v-if="$vuetify.breakpoint.mdAndUp" />
+      <v-spacer class="d-none d-md-flex" />
 
       <div
-        v-if="$vuetify.breakpoint.mdAndUp"
+        class="d-none d-md-flex"
       >
         <header-option
           v-for="(item, i) in items"
