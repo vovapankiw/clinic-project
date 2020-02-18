@@ -1,4 +1,8 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
+
+const environment = {
+  API_URL: '[https://hnyz-clinic.herokuapp.com]'
+}
 
 export default {
   mode: 'universal',
@@ -45,8 +49,12 @@ export default {
     '@nuxtjs/axios',
   ],
 
+  env: {
+    // routerMode: '',
+    baseUrl: '[https://hnyz-clinic.herokuapp.com]',
+  },
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseURL: environment.API_URL || 'http://localhost:3000',
     credentials: false,
   },
 
