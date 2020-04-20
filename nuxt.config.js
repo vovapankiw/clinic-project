@@ -46,7 +46,7 @@ export default {
   ],
 
   axios: {
-    baseURL: 'https://hnyz-clinic.herokuapp.com' || 'http://localhost:3000',
+    baseURL: 'http://localhost:3000' || 'https://hnyz-clinic.herokuapp.com',
     credentials: false,
   },
 

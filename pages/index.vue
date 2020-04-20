@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <home />
     <news />
     <photo-banner

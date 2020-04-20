@@ -183,7 +183,7 @@
 <style scoped>
   .service__container {
     padding: 120px 0 50px 0;
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     justify-content: center;
   }

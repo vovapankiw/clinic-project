@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grey lighten-5 ma-0"
+    class="grey lighten-5 ma-0 py-12"
   >
     <p
       class="text-center pa-2"
@@ -72,7 +72,7 @@
 
     &__main {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 350px);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-gap: 15px;
       justify-content: space-around;
       justify-items: center;
@@ -81,6 +81,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
       }
 
       &_img {

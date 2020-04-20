@@ -1,8 +1,8 @@
 <template>
-  <div class="news__wrapper">
-    <h2 class="news__title">Новини</h2>
+  <div class="global__news__wrapper">
+    <h2 class="global__news__title">Новини</h2>
 
-    <div class="news__rest__container">
+    <div class="global__news__rest__container">
       <news-card
         v-for="news in allNews"
         :key="news.id"
@@ -34,11 +34,12 @@
 </script>
 
 <style scoped lang="scss">
-  .news {
+  .global__news {
     &__wrapper {
       padding: 100px 60px 20px 60px;
       display: flex;
       flex-direction: column;
+      min-height: 85vh;
     }
 
     &__title {
