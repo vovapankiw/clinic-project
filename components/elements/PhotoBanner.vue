@@ -1,6 +1,6 @@
 <template>
   <div
-    class="photo-banner"
+    class="photo-banner px-3"
   >
     <img
       :src="src"
@@ -10,31 +10,22 @@
     <div
       class="photo-banner__title__wrapper"
     >
+      <span
+      class="photo-banner__title"
+      >
+        {{ title }}
+      </span>
       <div v-if="showBtns">
         <v-btn
           depressed
           large
           color="primary"
-          min-width="150px"
-          class="photo-banner__btn my-1"
-        >
-          038-48-715
-        </v-btn>
-        <v-btn
-          depressed
-          large
-          color="accent"
           class="photo-banner__btn my-1"
           @click="showSchedule"
         >
           Графік роботи
         </v-btn>
       </div>
-      <span
-      class="photo-banner__title"
-      >
-        {{ title }}
-      </span>
     </div>
 
     <schedule

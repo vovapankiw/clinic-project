@@ -1,7 +1,7 @@
 
 export const state = () => ({
   news: [],
-  stuff: [],
+  staff: [],
   photos: [],
   schedule: [],
 });
@@ -25,7 +25,7 @@ export const actions = {
 
 export const getters = {
   allNews: state => state.news,
-  getStuff: state => state.stuff,
+  staff: state => state.staff,
   getPhotos: state => state.photos,
   getSchedule: state => state.schedule,
 };

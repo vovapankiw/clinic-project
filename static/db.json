@@ -34,11 +34,11 @@
         "date": "11.12.2019"
       }
     ],
-    "stuff": [
+    "staff": [
       {
         "id": 1,
         "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd\\.jpg",
+        "src": "pankivd.jpg",
         "phone": "067-55-64-662",
         "experience": 20,
         "position": "Head",
@@ -47,7 +47,7 @@
       {
         "id": 2,
         "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd\\.jpg",
+        "src": "pankivd.jpg",
         "phone": "067-55-64-662",
         "experience": 20,
         "position": "Head",
@@ -56,7 +56,7 @@
       {
         "id": 3,
         "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd\\.jpg",
+        "src": "pankivd.jpg",
         "phone": "067-55-64-662",
         "experience": 20,
         "position": "Head",
@@ -65,25 +65,7 @@
       {
         "id": 4,
         "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd\\.jpg",
-        "phone": "067-55-64-662",
-        "experience": 20,
-        "position": "Head",
-        "qualification": "Вища кваліфікаційна категорія"
-      },
-      {
-        "id": 5,
-        "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd\\.jpg",
-        "phone": "067-55-64-662",
-        "experience": 20,
-        "position": "Head",
-        "qualification": "Вища кваліфікаційна категорія"
-      },
-      {
-        "id": 6,
-        "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd\\.jpg",
+        "src": "pankivd.jpg",
         "phone": "067-55-64-662",
         "experience": 20,
         "position": "Head",

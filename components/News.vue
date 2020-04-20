@@ -1,6 +1,6 @@
 <template>
   <div
-    class="news__wrapper"
+    class="news__wrapper px-3"
   >
     <div class="news__title py-4 display-1">
       <h2>Новини</h2>
@@ -44,7 +44,7 @@
 </script>
 
 <style scoped lang="scss">
-  .news__wrapper {
+  .news__wrappers {
     padding: 25px 15px;
 
     @media only screen and (max-width: 350px) {
