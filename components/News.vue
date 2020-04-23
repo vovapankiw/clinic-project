@@ -34,7 +34,7 @@
       ]),
 
       /**
-       * Showing last news accroding order in db
+       * Showing last news according the order in db
        */
       lastNews() {
         return this.allNews.slice(-3);

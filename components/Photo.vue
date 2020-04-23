@@ -15,7 +15,7 @@
         >
           <figure class="myPhoto">
             <img
-              :src="`https://picsum.photos/400/400?image=${ i + 10}`"
+              :src="require(`~/assets/images/${photo.src}`)"
             >
           </figure>
         </li>
@@ -25,53 +25,14 @@
 </template>
 
 <script>
+  import  { mapGetters } from 'vuex';
+
   export default {
     name: "Photo",
-    data() {
-      return {
-        photos: [
-          {
-            id: 1,
-            src:'',
-            alt: '',
-          } ,
-          {
-            id: 2,
-            src:'',
-            alt: '',
-          },
-          {
-            id: 3,
-            src:'',
-            alt: '',
-          },
-          {
-            id: 4,
-            src:'',
-            alt: '',
-          },
-          {
-            id: 5,
-            src:'',
-            alt: '',
-          },
-          {
-            id: 6,
-            src:'',
-            alt: '',
-          },
-          {
-            id: 7,
-            src:'',
-            alt: '',
-          },
-          {
-            id: 8,
-            src:'',
-            alt: '',
-          }
-        ]
-      }
+    computed: {
+      ...mapGetters([
+        'photos',
+      ]),
     }
   }
 </script>
@@ -92,7 +53,7 @@
 
   .discovery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     list-style-type: none;
     padding: 15px 0 0 0;
   }
@@ -108,7 +69,7 @@
     opacity: 0.7;
     width: 100%;
     height: auto;
-    -webkit-transform: scale(1.15);
+    -webkit-transform: scale(1.1);
     transform: scale(1.15);
     -webkit-transition: -webkit-transform 0.5s;
     transition: -webkit-transform 0.5s;

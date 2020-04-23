@@ -10,7 +10,7 @@
         class="news-post__main-post__container"
       >
         <img
-          :src="require(`~/assets/${chosenNews.img}.jpg`)"
+          :src="require(`~/assets/news/${chosenNews.img}`)"
           :alt="chosenNews.title"
           class="news-post__main-post__img"
         >

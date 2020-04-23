@@ -43,7 +43,7 @@
                   <v-icon>mdi-email</v-icon>
                 </v-list-item-icon>
 
-                <v-list-item-title>hnyzclinic@gmail.com</v-list-item-title>
+                <v-list-item-title>hnyzclinik@gmail.com</v-list-item-title>
               </v-list-item>
 
               <v-list-group
@@ -55,17 +55,17 @@
                 </template>
 
                 <v-list-item
-                  v-for="(admin, i) in admins"
+                  v-for="(admin, i) in staff"
                   :key="i"
                   link
                   class="doctors__list_item"
                 >
                   <v-list-item-avatar>
-                    <v-img src="https://cdn.vuetifyjs.com/images/lists/5.jpg"></v-img>
+                    <v-img  :src="require(`~/assets/staff/${admin.src}`)"></v-img>
                   </v-list-item-avatar>
 
-                  <v-list-item-title v-text="admin[0]"></v-list-item-title>
-                  <v-list-item-title v-text="admin[1]"></v-list-item-title>
+                  <v-list-item-title v-text="adaptedName(admin.name)"></v-list-item-title>
+                  <v-list-item-title v-text="admin.phone"></v-list-item-title>
                 </v-list-item>
 
               </v-list-group>
@@ -93,16 +93,22 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     name: "ContactInfo",
-    data: () => ({
-      admins: [
-        ['Паньків Д.В.', '067-55-88-665'],
-        ['Паньків О.Ю.', '097-56-47-995'],
-        ['Паньків О.Ю.', '097-56-47-995'],
-        ['Паньків О.Ю.', '097-56-47-995'],
-      ],
-    }),
+    computed: {
+      ...mapGetters([
+        'staff'
+      ])
+    },
+    methods: {
+      adaptedName(name) {
+        return name
+          .split(' ')
+          .reduce((acc, cur, idx, arr) => acc + (arr.length > 1 ? (idx === 0 ? `${cur} ` : `${cur.substring(0, 1)}.`) : ''), '')
+      }
+    }
   }
 </script>
 
