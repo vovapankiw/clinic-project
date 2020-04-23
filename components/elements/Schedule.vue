@@ -30,7 +30,25 @@
           :hide-default-header="$vuetify.breakpoint.xs"
           disable-sort
           class="elevation-1 schedule_table"
-        ></v-data-table>
+        >
+          <template v-slot:item="{ item }">
+            <tr
+              v-if="item.vacation.length"
+            >
+              <td>{{ item.name }}</td>
+              <td colspan="7" class="schedule_table__row-vacation">{{ item.vacation }}</td>
+            </tr>
+            <tr
+              v-else
+            >
+              <td
+                v-for="column in item"
+              >
+                <span>{{ column }}</span>
+              </td>
+            </tr>
+          </template>
+        </v-data-table>
       </v-card>
     </v-dialog>
   </div>
@@ -83,6 +101,11 @@
   .schedule_table{
     th {
       text-align: center !important;
+    }
+
+    &__row-vacation {
+      text-align: center;
+
     }
   }
 </style>

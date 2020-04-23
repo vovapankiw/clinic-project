@@ -3,114 +3,100 @@
     "news": [
       {
         "id": "1",
-        "title": "Доступні ліки",
-        "text": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "fullText": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "img": "news_1",
-        "date": "11.12.2019"
+        "title": "Коли і для чого потрібна маска?",
+        "text": "Хто з нас не шукав хірургічних масок в аптеках? Але маски потрібні не завжди…",
+        "fullText": "Однією з причин , чому люди носять маски, є їхнє переконання ,що це захистить їх від вірусу. Але вірус не літає навколо у повітрі!!!Тож це мене ні від чого не захищає,бо його немає навколо мене .Він може бути на моїй руці, після рукостискання з кимось, хто має вірус, і я перенесла цей вірус на своє обличчя. Якщо у вашому середовищі всі носять маску крім вас ,тоді ви справді можете почуватися вразливими. Бо ви відчуваєте, ніби не маєте того захисту , який мають усі інші . Але з точки зору логіки, якщо ви не перебуваєте близько до людей, якщо вони не кашляють та чхають на вас , то маска не є необхідною. Вірус потрапляє до тіла крізь слизові мембрани. Маємо на увазі очі, ніс,рот.І він передається від людини до людини, як правило ,коли ми торкаємось очей ,рота чи носа, або якщо ми вдихаємо краплі прямо від когось, хто чхає чи кашляє.Маски здатні знизити поширення вірусу від інфікованих,коли тісного контакту не уникнути. Найкращий спосіб для громадян захиститись від коронавірусу та інших респіраторних вірусів-це справді  ретельна гігієна рук.Тобто мити руки водою з милом або ж спиртовим гелем, якщо не можна помити водою з милом .Особливо ,якщо вважаєте , що могли заразитись. Якщо ви перебували в громадських місцях і торкались поверхонь,яких могли торкатись інші люди. Це справді найкращий спосіб. І сежити, чи бува я не торкаюсь обличчя.Коли велика кількість людей , яким не потрібна маски, користуються або ж запасаються ними, тоді зявляється брак масок там, де їх справді дуже потребують.Для медиків , які опинились не передовій і мають справу з підозрами на коронавірус чи підтвердженими випадкамихвороби. Переважна більшість людей не вразлива до розвитку сильної інфекції. Для більшлвсті людей це буде звичайним захворюванням , на зразок застуди , кашлю, чи грипу. У зоні ризику - старші люди з супутніми захворюваннями. Тож вам не треба панічно скуповувати маски                              Фахівці ВООЗ  не радить людям носити маски , хіба що :- вони самі хворі на Covid-19, або доглядають за хворими, або ж длля того,щоб не торкатись обличчя руками.",
+        "img": "news_mask.webp",
+        "date": "20.04.2020"
       },
       {
         "id": "2",
-        "title": "Апарат для аналізу крові",
-        "text": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "fullText": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "img": "news_2",
-        "date": "11.12.2019"
+        "title": "Електронний запис  на прийом до сімейного лікаря",
+        "text": "Запис проводиться для уникнення черг і економії вашого часу",
+        "fullText": "Для електронного запису потрібно зателефонувати по номеру 48-715 і вказати дату , годину та лікаря з яким ви уклали декларацію. ",
+        "img": "news_registration.jpg",
+        "date": "20.04.2020"
       },
       {
         "id": "3",
-        "title": "Обережно грип!",
-        "text": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "fullText": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "img": "news_3",
-        "date": "11.12.2019"
-      },
-      {
-        "id": "4",
-        "title": "Обережно грип!",
-        "text": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "fullText": "Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine,Hello, my name is Volodya, but my friends call me Vova. I am from the western part of Ukraine",
-        "img": "news_3",
-        "date": "11.12.2019"
+        "title": "Вплив COVID-19 на імунітет",
+        "text": "Стане імунітет слабкішим в майбутньому, якщо все раптом несподівано стало стерильним і боротися організму ні з чим не треба?",
+        "fullText": "Це дійсно дуже важливе питання, і це те, чим нам всім в перспективі відгукнеться коронавірус. Справа в тому, що медична наука давно оперує поняттям «хвороби високої чистоти». Наш організм, приходячи в цей світ, готовий до того, щоб щодня і щогодини контактувати з мільярдами бактерій і вірусів. Але, оскільки навколо чистота, мило, дезінфікуючі засоби і так далі, контакти дітей з брудом різко зменшуються, і імунітет, умовно кажучи, залишається недовантаженим. Він не може в повному обсязі робити те, що йому належить. І він починає реагувати на все те, на що в звичайних умовах він би не реагував, якби займався вірусами, бактеріями, глистами, грибами і так далі. Саме це і є головна причина величезної кількості алергічних захворювань - недовантаження імунітету призводить до неадекватних імунних реакцій організму. Мова йде не про те, що імунітет стає слабкішим, а скоріше про те, що імунітет стає неадекватним. Поза всяким сумнівом, масове застосування дезінфікуючих засобів призведе до значного зростання алергічних захворювань. Ми побачимо збільшення кількості випадків астми, сезонної алергії - це все ми будемо розсьорбувати ще довгі роки, навіть якщо вже забудемо про коронавіруси\n",
+        "img": "imunitet.webp",
+        "date": "23.04.2020"
       }
     ],
     "staff": [
       {
         "id": 1,
         "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd.jpg",
-        "phone": "067-55-64-662",
-        "experience": 20,
-        "position": "Head",
-        "qualification": "Вища кваліфікаційна категорія"
+        "src": "pankivd.webp",
+        "phone": "067-927-4656",
+        "experience": 29,
+        "position": "Директор",
+        "qualification": "Вища кваліфікаційна категорія",
+        "status": "На роботі"
       },
       {
         "id": 2,
-        "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd.jpg",
+        "name": "Гасинець Євгенія Володимирівна",
+        "src": "hasene.webp",
         "phone": "067-55-64-662",
-        "experience": 20,
-        "position": "Head",
-        "qualification": "Вища кваліфікаційна категорія"
+        "experience": 12,
+        "position": "Сімейний лікар",
+        "qualification": "Перша кваліфікаційна категорія",
+        "status": "На роботі"
       },
       {
         "id": 3,
-        "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd.jpg",
-        "phone": "067-55-64-662",
-        "experience": 20,
-        "position": "Head",
-        "qualification": "Вища кваліфікаційна категорія"
+        "name": "Паньків Ольга Юріївна",
+        "src": "pankivo.webp",
+        "phone": "097-742-6399",
+        "experience": 2,
+        "position": "Терапевт",
+        "qualification": "Спеціаліст",
+        "status": "На роботі"
       },
       {
         "id": 4,
-        "name": "Паньків Дарія Володимирівна",
-        "src": "pankivd.jpg",
-        "phone": "067-55-64-662",
-        "experience": 20,
-        "position": "Head",
-        "qualification": "Вища кваліфікаційна категорія"
+        "name": "Купець Ульяна Іванівна",
+        "src": "kupetcu.webp",
+        "phone": "-",
+        "experience": 3,
+        "position": "Сімейний лікар",
+        "qualification": "Спеціаліст",
+        "status": "У відпустці"
       }
     ],
     "photos": [
       {
         "id": 1,
-        "src": "",
+        "src": "1.webp",
         "alt": ""
       } ,
       {
         "id": 2,
-        "src": "",
+        "src": "2.webp",
         "alt": ""
       } ,
       {
         "id": 3,
-        "src": "",
+        "src": "3.webp",
         "alt": ""
       } ,
       {
         "id": 4,
-        "src": "",
+        "src":"4.webp",
         "alt": ""
       } ,
       {
         "id": 5,
-        "src": "",
+        "src": "5.webp",
         "alt": ""
       } ,
       {
         "id": 6,
-        "src": "",
-        "alt": ""
-      } ,
-      {
-        "id": 7,
-        "src": "",
-        "alt": ""
-      } ,
-      {
-        "id": 8,
-        "src": "",
+        "src": "6.webp",
         "alt": ""
       }
     ],
@@ -123,27 +109,8 @@
         "thursday": "9:00 - 18:00",
         "friday": "9:00 - 18:00",
         "saturday": "9:00 - 18:00",
-        "sunday": "9:00 - 18:00"
-      },
-      {
-        "name": "Паньків О.Ю.",
-        "monday": "9:00 - 18:00",
-        "tuesday": "9:00 - 18:00",
-        "wednesday": "9:00 - 18:00",
-        "thursday": "9:00 - 18:00",
-        "friday": "9:00 - 18:00",
-        "saturday": "9:00 - 18:00",
-        "sunday": "9:00 - 18:00"
-      },
-      {
-        "name": "Купець У.І.",
-        "monday": "9:00 - 18:00",
-        "tuesday": "9:00 - 18:00",
-        "wednesday": "9:00 - 18:00",
-        "thursday": "9:00 - 18:00",
-        "friday": "9:00 - 18:00",
-        "saturday": "9:00 - 18:00",
-        "sunday": "9:00 - 18:00"
+        "sunday": "9:00 - 18:00",
+        "vacation": ""
       },
       {
         "name": "Гасенець Є.В.",
@@ -153,7 +120,68 @@
         "thursday": "9:00 - 18:00",
         "friday": "9:00 - 18:00",
         "saturday": "9:00 - 18:00",
-        "sunday": "9:00 - 18:00"
+        "sunday": "9:00 - 18:00",
+        "vacation": ""
+      },
+      {
+        "name": "Паньків О.Ю.",
+        "monday": "9:00 - 18:00",
+        "tuesday": "9:00 - 18:00",
+        "wednesday": "9:00 - 18:00",
+        "thursday": "9:00 - 18:00",
+        "friday": "9:00 - 18:00",
+        "saturday": "9:00 - 18:00",
+        "sunday": "9:00 - 18:00",
+        "vacation": ""
+      },
+      {
+        "name": "Купець У.І.",
+        "monday": "",
+        "tuesday": "",
+        "wednesday": "",
+        "thursday": "",
+        "friday": "",
+        "saturday": "",
+        "sunday": "",
+        "vacation": "У відпустці"
+      }
+    ],
+    "services": [
+      {
+        "name": "Біохімічний аналіз крові( АЛТ, АST,загальний білірубін,сечовина,креатинін,глюкоза,холестерин)",
+        "price": "",
+        "paid": false,
+        "tooltip": "Один раз на рік послуга є безоплатною"
+      },
+      {
+        "name": "Загальний аналіз крові",
+        "price": "",
+        "paid": false
+      },
+      {
+        "name": "Загальний аналіз сечі",
+        "price": "",
+        "paid": false
+      },
+      {
+        "name": "Фізіотерапія(УВЧ, електорофорез,ампліпульс,інгаляції,)",
+        "price": "",
+        "paid": false
+      },
+      {
+        "name": "Консультація та надання первинної медичної допомоги Сімейним лікарем",
+        "price": "",
+        "paid": false
+      },
+      {
+        "name": "Виписування рецептів по програмі \"Доступні ліки\"",
+        "price": "",
+        "paid": false
+      },
+      {
+        "name": "Біохімічний аналіз крові( АЛТ, АST,загальний білірубін,сечовина,креатинін,глюкоза,холестерин)",
+        "price": 25,
+        "paid": true
       }
     ]
   }

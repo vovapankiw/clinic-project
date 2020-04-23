@@ -61,6 +61,17 @@
           <v-list-item-subtitle>Категорія</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
+
+      <v-list-item @click="">
+        <v-list-item-icon>
+          <v-icon color="indigo">mdi-account-check</v-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-list-item-title> {{ member.status }}</v-list-item-title>
+          <v-list-item-subtitle>Статус</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
     </v-list>
   </v-card>
 </template>
@@ -80,7 +91,7 @@
 <style scoped>
   .staff__img {
     width: 100%;
-    height:200px;
+    height:330px;
     object-fit: cover;
     background-blend-mode: darken;
   }
