@@ -142,7 +142,7 @@
     }
 
     .v-data-table__mobile-row {
-      max-width: 70%;
+      max-width: 80vw;
     }
 
     .v-data-table__mobile-row__cell {
