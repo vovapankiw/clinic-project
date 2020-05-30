@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://hnyzclinic.lviv.ua/sitemap.xml
+Host: hnyzclinic.lviv.ua

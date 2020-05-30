@@ -6,12 +6,15 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'uk'
+    },
     titleTemplate: "Гніздичівська АЗПСМ",
     title: "Гніздичівська АЗПСМ",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Гніздичівська амблуаторія сімейної практики та загальної медицини, надає послуи з лікування, аналізу крові та медичних консультацій' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
@@ -43,6 +46,7 @@ export default {
   modules: [
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
   ],
 
   axios: {
@@ -67,6 +71,39 @@ export default {
     icons: {
       iconfont: 'mdi', // default - only for display purposes
     },
+  },
+
+  /* Options to generate sitemap file */
+  sitemap: {
+    hostname: 'http://hnyzclinic.lviv.ua',
+    gzip: true,
+    routes: [
+      {
+        url: '/',
+        priority: 1,
+        lastmodISO: '2020-05-30T00:30:00.000Z'
+      },
+      {
+        url: '/staff',
+        priority: 1,
+        lastmodISO: '2020-05-30T00:30:00.000Z'
+      },
+      {
+        url: '/services',
+        priority: 1,
+        lastmodISO: '2020-05-30T00:30:00.000Z'
+      },
+      {
+        url: '/news',
+        priority: 1,
+        lastmodISO: '2020-05-30T00:30:00.000Z'
+      },
+      {
+        url: '/contacts',
+        priority: 1,
+        lastmodISO: '2020-05-30T00:30:00.000Z'
+      },
+    ]
   },
   /*
   ** Build configuration

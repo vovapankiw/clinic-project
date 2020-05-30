@@ -18,6 +18,19 @@
   import NewsCard from '../../components/elements/NewsCard';
 
   export default {
+    head () {
+      return {
+        title: 'Новини Гніздичівської АЗПСМ',
+        titleTemplate: 'Новини Гніздичівської АЗПСМ',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Новини які стосуються Гніздичівської АЗПСМ, а також корисна інформація для пацієнтів'
+          }
+        ]
+      }
+    },
     name: "News",
     components: {
       NewsCard,

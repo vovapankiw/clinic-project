@@ -18,6 +18,19 @@
   import StaffItem from '../../components/elements/StaffItem';
 
   export default {
+    head () {
+      return {
+        title: 'Персонал Гніздичівської АЗПСМ',
+        titleTemplate: 'Персонал Гніздичівської АЗПСМ',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Персонал у Гніздичівській АЗПСМ це поєднання досвіду та молодого ентузіазмуб де кожен є професіоналом своєї справи '
+          }
+        ]
+      }
+    },
     name: "Staff",
     components: {
       StaffItem

@@ -68,6 +68,19 @@
 <script>
   import { mapGetters } from 'vuex';
   export default {
+    head () {
+      return {
+        title: 'Послуги Гніздичівської АЗПСМ',
+        titleTemplate: 'Послуги Гніздичівської АЗПСМ',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Амбулаторія надає широкий спектр послуг аналізу крові, сечі, а також проводить лікування та огляд хворих'
+          }
+        ]
+      }
+    },
     name: "index.vue",
     data () {
       return {
