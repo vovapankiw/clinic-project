@@ -103,7 +103,6 @@
       width: 100%;
       height: 507px;
       object-fit: cover;
-      padding: 25px;
       filter: brightness(65%);
     }
 

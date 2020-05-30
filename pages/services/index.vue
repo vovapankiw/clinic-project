@@ -39,6 +39,7 @@
               :items="shownServices"
               :search="search"
               hide-default-footer
+
               :hide-default-header="$vuetify.breakpoint.xs"
             >
               <template v-slot:item.name="{ item }">
@@ -116,11 +117,27 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss">
   .service__container {
     padding: 120px 0 50px 0;
     min-height: 85vh;
     display: flex;
     justify-content: center;
+
+    .v-data-table td {
+      padding: 0 8px;
+    }
+
+    .v-data-table__mobile-row {
+      max-width: 70%;
+    }
+
+    .v-data-table__mobile-row__cell {
+      max-width: 50%;
+    }
+
+    .v-data-table__wrapper {
+      overflow: hidden;
+    }
   }
 </style>

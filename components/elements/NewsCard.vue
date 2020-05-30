@@ -18,7 +18,7 @@
       <v-card-subtitle class="pb-0">{{ news.date }}</v-card-subtitle>
 
       <v-card-text class="text--primary pb-0">
-        <div>{{ news.text }}</div>
+        <div class="news_card__text">{{ news.text }}</div>
       </v-card-text>
     </template>
 
@@ -83,11 +83,15 @@
     word-break: break-word;
 
     &-normal {
-      top: 43%;
+      top: 40%;
     }
 
     &-mini {
       top: 30%;
     }
+  }
+
+  .news_card__text {
+    min-height: 70px;
   }
 </style>

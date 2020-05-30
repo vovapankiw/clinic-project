@@ -136,13 +136,13 @@
       },
       {
         "name": "Купець У.І.",
-        "monday": "",
-        "tuesday": "",
-        "wednesday": "",
-        "thursday": "",
-        "friday": "",
-        "saturday": "",
-        "sunday": "",
+        "monday": "У відпустці",
+        "tuesday": "У відпустці",
+        "wednesday": "У відпустці",
+        "thursday": "У відпустці",
+        "friday": "У відпустці",
+        "saturday": "У відпустці",
+        "sunday": "У відпустці",
         "vacation": "У відпустці"
       }
     ],
