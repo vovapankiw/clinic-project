@@ -17,7 +17,7 @@
       >
         <img
           :src="require(`~/assets/pillars/${item.src}`)"
-          alt="item.alt"
+          :alt="item.alt"
           class="care_pillars__main_img"
         >
         <div
@@ -65,7 +65,7 @@
 
     &__title {
       color: #4496d4;
-      font-size: 30pt;
+      font-size: 2rem;
       font-family: open_sanslight;
       line-height: 130%;
     }

@@ -15,7 +15,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Гніздичівська амблуаторія сімейної практики та загальної медицини, надає послуи з лікування, аналізу крові та медичних консультацій' },
-      { name:'google-site-verification', content:'r2TTDJXhygfh5MZGBGLnF-B4cVFyYJpy_xNpYi005Gs'
+      { name:'google-site-verification', content:'r2TTDJXhygfh5MZGBGLnF-B4cVFyYJpy_xNpYi005Gs' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }

@@ -7,6 +7,7 @@
     <img
       :class="[size === 'normal' ? 'news_card__img-normal' : 'news_card__img-mini', 'news_card__img']"
       :src="require(`~/assets/news/${news.img}`)"
+      :alt="news.title"
     >
     <v-card-title
       :class="[size === 'normal' ? 'news_card__title-normal' : 'news_card__title-mini', 'news_card__title']"

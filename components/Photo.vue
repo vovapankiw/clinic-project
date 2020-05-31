@@ -16,6 +16,7 @@
           <figure class="myPhoto">
             <img
               :src="require(`~/assets/images/${photo.src}`)"
+              :alt="photo.alt"
             >
           </figure>
         </li>
@@ -43,7 +44,7 @@
 
     &__title {
       color: #4496d4;
-      font-size: 30pt;
+      font-size: 2rem;
       font-family: open_sanslight;
       line-height: 130%;
       text-align: center;

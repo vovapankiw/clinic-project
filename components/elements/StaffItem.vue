@@ -5,6 +5,7 @@
   >
     <img
       :src="require(`~/assets/staff/${member.src}`)"
+      :alt="member.name"
       class="staff__img"
     >
       <v-row class="fill-height d-flex align-center justify-center">

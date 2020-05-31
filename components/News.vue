@@ -2,7 +2,7 @@
   <div
     class="news__wrapper px-3"
   >
-    <div class="news__title py-4 display-1">
+    <div class="news__title py-4">
       <h2>Новини</h2>
     </div>
     <div class="news-card__container">
@@ -53,7 +53,7 @@
   }
   .news__title {
     color: #4496d4;
-    font-size: 30pt;
+    font-size: 2rem;
     font-family: open_sanslight;
     line-height: 130%;
     text-align: center;

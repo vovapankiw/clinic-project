@@ -13,6 +13,7 @@
       <img
         class="navbar__logo"
         src="~assets/logo.png"
+        alt="logo of the organization"
       >
       <v-spacer class="d-none d-md-flex" />
 
