@@ -2,6 +2,10 @@ import colors from 'vuetify/es5/util/colors';
 
 export default {
   mode: 'universal',
+  server: {
+    port: 3000, // default: 3000
+  },
+
   /*
   ** Headers of the page
   */
