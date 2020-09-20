@@ -5,11 +5,9 @@ export default {
   server: {
     port: 3000, // default: 3000
   },
-
   /*
    ** Headers of the page
    */
-
   head: {
     htmlAttrs: {
       lang: 'uk'
