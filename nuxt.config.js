@@ -7,47 +7,60 @@ export default {
   },
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
+
   head: {
     htmlAttrs: {
       lang: 'uk'
     },
     titleTemplate: "Гніздичівська АЗПСМ",
     title: "Гніздичівська АЗПСМ",
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Гніздичівська амблуаторія сімейної практики та загальної медицини, надає послуи з лікування, аналізу крові та медичних консультацій' },
-      { name:'google-site-verification', content:'r2TTDJXhygfh5MZGBGLnF-B4cVFyYJpy_xNpYi005Gs' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Гніздичівська амблуаторія сімейної практики та загальної медицини, надає послуи з лікування, аналізу крові та медичних консультацій'
+      },
+      {
+        name: 'google-site-verification',
+        content: 'r2TTDJXhygfh5MZGBGLnF-B4cVFyYJpy_xNpYi005Gs'
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
-,
+    link: [{
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.png'
+      },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
   },
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: '#fff'
+  },
   /*
-  ** Global CSS
-  */
-  css: [
-  ],
+   ** Global CSS
+   */
+  css: [],
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: [],
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
@@ -60,9 +73,9 @@ export default {
   },
 
   /*
-  ** vuetify module configuration
-  ** https://github.com/nuxt-community/vuetify-module
-  */
+   ** vuetify module configuration
+   ** https://github.com/nuxt-community/vuetify-module
+   */
   vuetify: {
     theme: {
       primary: colors.blue.darken2,
@@ -82,8 +95,7 @@ export default {
   sitemap: {
     hostname: 'http://hnyzclinic.lviv.ua',
     gzip: true,
-    routes: [
-      {
+    routes: [{
         url: '/',
         priority: 1,
         lastmodISO: '2020-05-30T00:30:00.000Z'
@@ -111,13 +123,12 @@ export default {
     ]
   },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    },
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {},
   }
 }
