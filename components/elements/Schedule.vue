@@ -30,54 +30,53 @@
           :hide-default-header="$vuetify.breakpoint.xs"
           disable-sort
           class="elevation-1 schedule_table"
-        >
-        </v-data-table>
+        />
       </v-card>
     </v-dialog>
   </div>
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
-  export default {
-    name: "Schedule",
-    props: {
-      isScheduleVisible: {
-        type: Boolean,
-        default: false,
-      }
+export default {
+  name: 'Schedule',
+  props: {
+    isScheduleVisible: {
+      type: Boolean,
+      default: false,
     },
-    data() {
-      return {
-        headers: [
-          {
-            text: 'Лікар',
-            align: 'center',
-            sortable: false,
-            value: 'name',
-          },
-          { text: 'Понеділок', value: 'monday' },
-          { text: 'Вівторок', value: 'tuesday' },
-          { text: 'Середа', value: 'wednesday' },
-          { text: 'Четвер', value: 'thursday' },
-          { text: 'П\'ятниця', value: 'friday' },
-          { text: 'Субота', value: 'saturday' },
-          { text: 'Неділя', value: 'sunday' },
-        ],
-      }
+  },
+  data() {
+    return {
+      headers: [
+        {
+          text: 'Лікар',
+          align: 'center',
+          sortable: false,
+          value: 'name',
+        },
+        { text: 'Понеділок', value: 'monday' },
+        { text: 'Вівторок', value: 'tuesday' },
+        { text: 'Середа', value: 'wednesday' },
+        { text: 'Четвер', value: 'thursday' },
+        { text: 'П\'ятниця', value: 'friday' },
+        { text: 'Субота', value: 'saturday' },
+        { text: 'Неділя', value: 'sunday' },
+      ],
+    };
+  },
+  computed: {
+    ...mapGetters([
+      'getSchedule',
+    ]),
+  },
+  methods: {
+    hideDialog() {
+      this.$emit('hideDialog');
     },
-    computed: {
-      ...mapGetters([
-        'getSchedule',
-      ]),
-    },
-    methods: {
-      hideDialog() {
-        this.$emit('hideDialog');
-      }
-    }
-  }
+  },
+};
 </script>
 
 <style lang="scss">

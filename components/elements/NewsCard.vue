@@ -16,10 +16,14 @@
     </v-card-title>
 
     <template v-if="size === 'normal'">
-      <v-card-subtitle class="pb-0">{{ news.date }}</v-card-subtitle>
+      <v-card-subtitle class="pb-0">
+        {{ news.date }}
+      </v-card-subtitle>
 
       <v-card-text class="text--primary pb-0">
-        <div class="news_card__text">{{ news.text }}</div>
+        <div class="news_card__text">
+          {{ news.text }}
+        </div>
       </v-card-text>
     </template>
 
@@ -36,29 +40,29 @@
 </template>
 
 <script>
-  export default {
-    name: "NewsGroup",
-    props: {
-      news: {
-        type: Object,
-        required: true,
-      },
-      size: {
-        type: String,
-        default: 'normal',
-      }
+export default {
+  name: 'NewsGroup',
+  props: {
+    news: {
+      type: Object,
+      required: true,
     },
-    methods: {
-      openNews(id) {
-        this.$router.push({
-          path:`/news/${id}`,
-          params: {
-            id
-          }
-        });
-      }
-    }
-  }
+    size: {
+      type: String,
+      default: 'normal',
+    },
+  },
+  methods: {
+    openNews(id) {
+      this.$router.push({
+        path: `/news/${id}`,
+        params: {
+          id,
+        },
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

@@ -5,13 +5,13 @@
   >
     <template v-slot:activator="{ on }">
       <v-btn
-        v-on="on"
         text
         large
         :to="item.link"
         :nuxt="true"
+        v-on="on"
       >
-        {{  item.title }}
+        {{ item.title }}
       </v-btn>
     </template>
 
@@ -30,15 +30,15 @@
 </template>
 
 <script>
-  export default {
-    name: "HeaderOption",
-    props: {
-      item: {
-        type: Object,
-        required: true,
-      }
-    }
-  }
+export default {
+  name: 'HeaderOption',
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -22,14 +22,14 @@
 </template>
 
 <script>
-  import PhotoBanner from '../components/elements/PhotoBanner'
+import PhotoBanner from '../components/elements/PhotoBanner';
 
-  export default {
-    name: "Home",
-    components: {
-      PhotoBanner,
-    }
-  }
+export default {
+  name: 'Home',
+  components: {
+    PhotoBanner,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

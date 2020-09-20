@@ -1,6 +1,6 @@
 <template>
   <div
-   class="photo__container"
+    class="photo__container"
   >
     <section id="discoveries">
       <div class="photo__container__title">
@@ -26,16 +26,16 @@
 </template>
 
 <script>
-  import  { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
-  export default {
-    name: "Photo",
-    computed: {
-      ...mapGetters([
-        'photos',
-      ]),
-    }
-  }
+export default {
+  name: 'Photo',
+  computed: {
+    ...mapGetters([
+      'photos',
+    ]),
+  },
+};
 </script>
 
 <style scoped lang="scss">

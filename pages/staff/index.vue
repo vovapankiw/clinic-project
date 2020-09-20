@@ -1,6 +1,8 @@
 <template>
   <div class="staff__wrapper">
-    <h2 class="staff__title">Наша команда</h2>
+    <h2 class="staff__title">
+      Наша команда
+    </h2>
     <div
       class="staff__container"
     >
@@ -14,33 +16,33 @@
 </template>
 
 <script>
-  import  { mapGetters } from 'vuex';
-  import StaffItem from '../../components/elements/StaffItem';
+import { mapGetters } from 'vuex';
+import StaffItem from '../../components/elements/StaffItem';
 
-  export default {
-    head () {
-      return {
-        title: 'Персонал Гніздичівської АЗПСМ',
-        titleTemplate: 'Персонал Гніздичівської АЗПСМ',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Персонал у Гніздичівській АЗПСМ це поєднання досвіду та молодого ентузіазмуб де кожен є професіоналом своєї справи '
-          }
-        ]
-      }
-    },
-    name: "Staff",
-    components: {
-      StaffItem
-    },
-    computed: {
-      ...mapGetters([
-        'staff',
-      ]),
-    }
-  }
+export default {
+  name: 'Staff',
+  components: {
+    StaffItem,
+  },
+  head() {
+    return {
+      title: 'Персонал Гніздичівської АЗПСМ',
+      titleTemplate: 'Персонал Гніздичівської АЗПСМ',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Персонал у Гніздичівській АЗПСМ це поєднання досвіду та молодого ентузіазмуб де кожен є професіоналом своєї справи ',
+        },
+      ],
+    };
+  },
+  computed: {
+    ...mapGetters([
+      'staff',
+    ]),
+  },
+};
 </script>
 
 <style scoped>

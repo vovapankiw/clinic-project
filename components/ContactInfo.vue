@@ -20,7 +20,6 @@
                 >
                   Гніздичівська амбулаторія загальної практики <br> сімейної медицини
                 </v-list-item-title>
-
               </v-list-item>
 
               <v-list-item>
@@ -61,13 +60,12 @@
                   class="doctors__list_item"
                 >
                   <v-list-item-avatar>
-                    <v-img  :src="require(`~/assets/staff/${admin.src}`)"></v-img>
+                    <v-img :src="require(`~/assets/staff/${admin.src}`)" />
                   </v-list-item-avatar>
 
-                  <v-list-item-title v-text="adaptedName(admin.name)"></v-list-item-title>
-                  <v-list-item-title v-text="admin.phone"></v-list-item-title>
+                  <v-list-item-title v-text="adaptedName(admin.name)" />
+                  <v-list-item-title v-text="admin.phone" />
                 </v-list-item>
-
               </v-list-group>
             </v-list>
           </v-card>
@@ -83,33 +81,33 @@
               height="320"
               frameborder="0"
               style="border:0;"
-              allowfullscreen="" />
+              allowfullscreen=""
+            />
           </v-card>
         </v-row>
       </v-col>
-
     </v-row>
   </v-container>
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
-  export default {
-    name: "ContactInfo",
-    computed: {
-      ...mapGetters([
-        'staff'
-      ])
+export default {
+  name: 'ContactInfo',
+  computed: {
+    ...mapGetters([
+      'staff',
+    ]),
+  },
+  methods: {
+    adaptedName(name) {
+      return name
+        .split(' ')
+        .reduce((acc, cur, idx, arr) => acc + (arr.length > 1 ? (idx === 0 ? `${cur} ` : `${cur.substring(0, 1)}.`) : ''), '');
     },
-    methods: {
-      adaptedName(name) {
-        return name
-          .split(' ')
-          .reduce((acc, cur, idx, arr) => acc + (arr.length > 1 ? (idx === 0 ? `${cur} ` : `${cur.substring(0, 1)}.`) : ''), '')
-      }
-    }
-  }
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -144,6 +142,5 @@
       flex-direction: column;
     }
   }
-
 
 </style>

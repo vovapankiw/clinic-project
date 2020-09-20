@@ -25,7 +25,7 @@ import Home from '../components/Home';
 import News from '../components/News';
 import CarePillars from '../components/CarePillars';
 import Photo from '../components/Photo';
-import PhotoBanner from "../components/elements/PhotoBanner";
+import PhotoBanner from '../components/elements/PhotoBanner';
 
 export default {
   components: {
@@ -34,6 +34,6 @@ export default {
     News,
     CarePillars,
     Photo,
-  }
-}
+  },
+};
 </script>

@@ -16,31 +16,31 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
-  import NewsCard from './elements/NewsCard';
+import NewsCard from './elements/NewsCard';
 
-  export default {
-    name: "News",
-    components: {
-      NewsCard,
-    },
-    data() {
-      return { }
-    },
-    computed: {
-      ...mapGetters([
-        'allNews',
-      ]),
+export default {
+  name: 'News',
+  components: {
+    NewsCard,
+  },
+  data() {
+    return { };
+  },
+  computed: {
+    ...mapGetters([
+      'allNews',
+    ]),
 
-      /**
+    /**
        * Showing last news according the order in db
        */
-      lastNews() {
-        return this.allNews.slice(-3);
-      }
-    }
-  }
+    lastNews() {
+      return this.allNews.slice(-3);
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

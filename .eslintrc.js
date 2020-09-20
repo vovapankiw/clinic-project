@@ -13,18 +13,20 @@ module.exports = {
     'airbnb-base',
     'eslint:recommended',
     'plugin:vue/recommended',
-    'plugin:prettier/recommended',
   ],
   // required to lint *.vue files
-  plugins: ['vue'],
+  plugins: [ 'vue' ],
   // add your custom rules here
   rules: {
-    semi: [2, 'never'],
-    quotes: [2, 'single', { avoidEscape: true }],
-    indent: ['error', 2],
+    semi: [ 2, 'always' ],
+    quotes: [ 2, 'single', { avoidEscape: true } ],
+    indent: [ 'error', 2 ],
+    'array-bracket-spacing': [ 2, 'always' ],
+    'no-var': 2,
+    camelcase: 1,
     'no-console': 'warn',
+    'no-mixed-spaces-and-tabs': 2,
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { semi: false }],
     'import/extensions': [
       'error',
       'always',
@@ -47,7 +49,7 @@ module.exports = {
       },
     ],
     'no-trailing-spaces': 0,
-    'no-unused-vars': ['error', { vars: 'local', args: 'none' }],
+    'no-unused-vars': [ 'error', { vars: 'local', args: 'none' } ],
     'no-new': 0,
     'max-len': [
       'error',
@@ -57,7 +59,17 @@ module.exports = {
         ignorePattern: '(\\$t\\()|(:ref=")|(class=")|(^import.*)',
       },
     ],
+    'vue/html-indent': [
+      'warn',
+      2,
+      {
+        attribute: 1,
+        closeBracket: 0,
+        alignAttributesVertically: true,
+        ignores: [],
+      },
+    ],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },
-}
+};

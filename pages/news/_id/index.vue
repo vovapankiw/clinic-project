@@ -5,7 +5,9 @@
     >
       <h2
         class="news-post__main-post__title"
-      >{{ chosenNews.title }}</h2>
+      >
+        {{ chosenNews.title }}
+      </h2>
       <div
         class="news-post__main-post__container"
       >
@@ -17,7 +19,9 @@
       </div>
       <div
         class="news-post__main-post__text"
-      >{{ chosenNews.fullText }}</div>
+      >
+        {{ chosenNews.fullText }}
+      </div>
     </div>
     <div
       class="news-post__random-news"
@@ -33,33 +37,33 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
-  import NewsCard from '../../../components/elements/NewsCard';
+import NewsCard from '../../../components/elements/NewsCard';
 
-  export default {
-    name: "index.vue",
-    components: {
-      NewsCard
+export default {
+  name: 'IndexVue',
+  components: {
+    NewsCard,
+  },
+  computed: {
+    ...mapGetters([
+      'allNews',
+    ]),
+
+    chosenNews() {
+      return this.allNews.filter(({ id }) => id === this.$route.params.id)[0];
     },
-    computed: {
-      ...mapGetters([
-        'allNews',
-      ]),
 
-      chosenNews() {
-        return this.allNews.filter(({id}) => id === this.$route.params.id)[0]
-      },
+    randomNews() {
+      return this.allNews.filter(({ id }) => id !== this.$route.params.id).slice(0, 3);
+    },
 
-      randomNews() {
-        return this.allNews.filter(({id}) => id !== this.$route.params.id).slice(0, 3);
-      },
-
-      cardView() {
-        return this.$vuetify.breakpoint.smAndDown ? 'normal' : 'mini'
-      }
-    }
-  }
+    cardView() {
+      return this.$vuetify.breakpoint.smAndDown ? 'normal' : 'mini';
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
