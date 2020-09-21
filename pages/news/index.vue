@@ -1,6 +1,8 @@
 <template>
   <div class="global__news__wrapper">
-    <h2 class="global__news__title">Новини</h2>
+    <h2 class="global__news__title">
+      Новини
+    </h2>
 
     <div class="global__news__rest__container">
       <news-card
@@ -13,37 +15,37 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
-  import NewsCard from '../../components/elements/NewsCard';
+import NewsCard from '../../components/elements/NewsCard';
 
-  export default {
-    head () {
-      return {
-        title: 'Новини Гніздичівської АЗПСМ',
-        titleTemplate: 'Новини Гніздичівської АЗПСМ',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Новини які стосуються Гніздичівської АЗПСМ, а також корисна інформація для пацієнтів'
-          }
-        ]
-      }
-    },
-    name: "News",
-    components: {
-      NewsCard,
-    },
-    data() {
-      return { }
-    },
-    computed: {
-      ...mapGetters([
-        'allNews',
-      ])
-    }
-  }
+export default {
+  name: 'News',
+  components: {
+    NewsCard,
+  },
+  data() {
+    return { };
+  },
+  head() {
+    return {
+      title: 'Новини Гніздичівської АЗПСМ',
+      titleTemplate: 'Новини Гніздичівської АЗПСМ',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Новини які стосуються Гніздичівської АЗПСМ, а також корисна інформація для пацієнтів',
+        },
+      ],
+    };
+  },
+  computed: {
+    ...mapGetters([
+      'allNews',
+    ]),
+  },
+};
 </script>
 
 <style scoped lang="scss">

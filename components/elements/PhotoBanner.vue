@@ -11,7 +11,7 @@
       class="photo-banner__title__wrapper"
     >
       <span
-      class="photo-banner__title"
+        class="photo-banner__title"
       >
         {{ title }}
       </span>
@@ -29,49 +29,49 @@
     </div>
 
     <schedule
-      :isScheduleVisible="isScheduleVisible"
+      :is-schedule-visible="isScheduleVisible"
       @hideDialog="showSchedule"
     />
   </div>
 </template>
 
 <script>
-  import Schedule from  './Schedule';
+import Schedule from './Schedule';
 
-  export default {
-    name: "PhotoBanner",
-    components: {
-      Schedule,
+export default {
+  name: 'PhotoBanner',
+  components: {
+    Schedule,
+  },
+  props: {
+    title: {
+      type: String,
+      required: true,
     },
-    props: {
-      title: {
-        type: String,
-        required: true,
-      },
-      src: {
-        type: String,
-        required: true,
-      },
-      alt: {
-        type: String,
-        default: 'фото'
-      },
-      showBtns: {
-        type: Boolean,
-        default: false,
-      },
+    src: {
+      type: String,
+      required: true,
     },
-    data() {
-      return {
-        isScheduleVisible: false,
-      }
+    alt: {
+      type: String,
+      default: 'фото',
     },
-    methods: {
-      showSchedule() {
-        this.isScheduleVisible = !this.isScheduleVisible;
-      }
-    }
-  }
+    showBtns: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  data() {
+    return {
+      isScheduleVisible: false,
+    };
+  },
+  methods: {
+    showSchedule() {
+      this.isScheduleVisible = !this.isScheduleVisible;
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

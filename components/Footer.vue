@@ -35,41 +35,41 @@
 </template>
 
 <script>
-  export default {
-    name: "Footer",
-    data() {
-      return {
-        items: [
-          {
-            title: 'Головна',
-            icon: 'dashboard',
-            link: '/',
-          },
-          {
-            title: 'Персонал',
-            icon: 'question_answer',
-            link: '/staff',
-          },
-          {
-            title: 'Послуги',
-            icon: 'question_answer',
-            link: '/services',
-          },
-          {
-            title: 'Новини',
-            icon: 'question_answer',
-            link: '/news',
-          },
-          {
-            title: 'Контакти',
-            icon: 'question_answer',
-            link: '/contacts',
-          },
-        ],
-        dataInfo: 'Льівська обл., Жидачівський р-н., смт.Гніздичів, вул.Грушевського 112'
-      }
-    }
-  }
+export default {
+  name: 'Footer',
+  data() {
+    return {
+      items: [
+        {
+          title: 'Головна',
+          icon: 'dashboard',
+          link: '/',
+        },
+        {
+          title: 'Персонал',
+          icon: 'question_answer',
+          link: '/staff',
+        },
+        {
+          title: 'Послуги',
+          icon: 'question_answer',
+          link: '/services',
+        },
+        {
+          title: 'Новини',
+          icon: 'question_answer',
+          link: '/news',
+        },
+        {
+          title: 'Контакти',
+          icon: 'question_answer',
+          link: '/contacts',
+        },
+      ],
+      dataInfo: 'Льівська обл., Жидачівський р-н., смт.Гніздичів, вул.Грушевського 112',
+    };
+  },
+};
 </script>
 
 <style scoped>

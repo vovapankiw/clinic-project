@@ -2,49 +2,55 @@ import colors from 'vuetify/es5/util/colors';
 
 export default {
   mode: 'universal',
+  server: {
+    port: 3000, // default: 3000
+  },
   /*
    ** Headers of the page
    */
-
   head: {
     htmlAttrs: {
-      lang: 'uk'
+      lang: 'uk',
     },
-    titleTemplate: "Гніздичівська АЗПСМ",
-    title: "Гніздичівська АЗПСМ",
-    meta: [{
-        charset: 'utf-8'
+    titleTemplate: 'Гніздичівська АЗПСМ',
+    title: 'Гніздичівська АЗПСМ',
+    meta: [
+      {
+        charset: 'utf-8',
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1',
       },
       {
         hid: 'description',
         name: 'description',
-        content: 'Гніздичівська амблуаторія сімейної практики та загальної медицини, надає послуи з лікування, аналізу крові та медичних консультацій'
+        content:
+          'Гніздичівська амблуаторія сімейної практики та загальної медицини, надає послуи з лікування, аналізу крові та медичних консультацій',
       },
       {
         name: 'google-site-verification',
-        content: 'r2TTDJXhygfh5MZGBGLnF-B4cVFyYJpy_xNpYi005Gs'
-      }
+        content: 'r2TTDJXhygfh5MZGBGLnF-B4cVFyYJpy_xNpYi005Gs',
+      },
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.png'
+        href: '/favicon.png',
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
-    ]
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#fff'
+    color: '#fff',
   },
   /*
    ** Global CSS
@@ -57,11 +63,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/vuetify',
-    '@nuxtjs/axios',
-    '@nuxtjs/sitemap',
-  ],
+  modules: [ '@nuxtjs/vuetify', '@nuxtjs/axios', '@nuxtjs/sitemap' ],
 
   axios: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
@@ -80,7 +82,7 @@ export default {
       info: colors.teal.lighten1,
       warning: colors.amber.base,
       error: colors.deepOrange.accent4,
-      success: colors.green.accent3
+      success: colors.green.accent3,
     },
     icons: {
       iconfont: 'mdi', // default - only for display purposes
@@ -91,32 +93,33 @@ export default {
   sitemap: {
     hostname: 'http://hnyzclinic.lviv.ua',
     gzip: true,
-    routes: [{
+    routes: [
+      {
         url: '/',
         priority: 1,
-        lastmodISO: '2020-05-30T00:30:00.000Z'
+        lastmodISO: '2020-05-30T00:30:00.000Z',
       },
       {
         url: '/staff',
         priority: 1,
-        lastmodISO: '2020-05-30T00:30:00.000Z'
+        lastmodISO: '2020-05-30T00:30:00.000Z',
       },
       {
         url: '/services',
         priority: 1,
-        lastmodISO: '2020-05-30T00:30:00.000Z'
+        lastmodISO: '2020-05-30T00:30:00.000Z',
       },
       {
         url: '/news',
         priority: 1,
-        lastmodISO: '2020-05-30T00:30:00.000Z'
+        lastmodISO: '2020-05-30T00:30:00.000Z',
       },
       {
         url: '/contacts',
         priority: 1,
-        lastmodISO: '2020-05-30T00:30:00.000Z'
+        lastmodISO: '2020-05-30T00:30:00.000Z',
       },
-    ]
+    ],
   },
   /*
    ** Build configuration
@@ -126,5 +129,5 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {},
-  }
-}
+  },
+};

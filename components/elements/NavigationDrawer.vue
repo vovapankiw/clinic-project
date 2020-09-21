@@ -16,7 +16,8 @@
                height="73px"
                viewBox="0 0 150 73"
                enable-background="new 0 0 150 73"
-               xml:space="preserve">
+               xml:space="preserve"
+          >
             <polyline
               fill="none"
               stroke="#009B9E"
@@ -25,29 +26,26 @@
               points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
             />
           </svg>
-          <div class="fade-in"></div>
-          <div class="fade-out"></div>
+          <div class="fade-in" />
+          <div class="fade-out" />
         </div>
       </v-list-item-content>
     </v-list-item>
 
-    <v-divider></v-divider>
+    <v-divider />
 
     <v-list
       nav
       dense
       class="pt-6"
     >
-      <v-list-item-group
-
-      >
+      <v-list-item-group>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
           :to="item.link"
         >
-          <v-list-item-title
-          >
+          <v-list-item-title>
             {{ item.title }}
           </v-list-item-title>
         </v-list-item>
@@ -57,53 +55,53 @@
 </template>
 
 <script>
-  export default {
-    name: "NavigationDrawer",
-    props: {
-      showDrawer: {
-        type: Boolean,
-        default: false,
+export default {
+  name: 'NavigationDrawer',
+  props: {
+    showDrawer: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  data() {
+    return {
+      items: [
+        {
+          title: 'Головна',
+          link: '/',
+          options: [],
+        },
+        {
+          title: 'Персонал',
+          link: '/staff',
+          options: [],
+        },
+        {
+          title: 'Послуги',
+          link: '/services',
+          options: [],
+        },
+        {
+          title: 'Новини',
+          link: '/news',
+          options: [],
+        },
+        {
+          title: 'Контакти',
+          link: '/contacts',
+          options: [],
+        },
+      ],
+    };
+  },
+  methods: {
+    toggle(e) {
+      if (!e) {
+        this.$emit('hideDrawer');
       }
     },
-    data() {
-      return {
-        items: [
-          {
-            title: 'Головна',
-            link: '/',
-            options: []
-          },
-          {
-            title: 'Персонал',
-            link: '/staff',
-            options: []
-          },
-          {
-            title: 'Послуги',
-            link: '/services',
-            options: []
-          },
-          {
-            title: 'Новини',
-            link: '/news',
-            options: []
-          },
-          {
-            title: 'Контакти',
-            link: '/contacts',
-            options: []
-          },
-        ]
-      }
-    },
-    methods: {
-      toggle(e) {
-        if(!e) {
-          this.$emit('hideDrawer')
-        }
-      }
-    }
-  }
+  },
+};
 </script>
 
 <style scoped lang="scss">
