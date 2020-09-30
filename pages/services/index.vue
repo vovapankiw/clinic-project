@@ -1,27 +1,18 @@
 <template>
   <div class="service__container">
-    <v-card
-      width="80%"
-      height="100%"
-    >
+    <v-card width="80%" height="fit-content">
       <v-tabs
         v-model="tab"
         background-color="transparent"
         class="d-flex justify-center"
       >
-        <v-tab
-          v-for="item in items"
-          :key="item.tab"
-        >
+        <v-tab v-for="item in items" :key="item.tab">
           {{ item.tab }}
         </v-tab>
       </v-tabs>
 
       <v-tabs-items v-model="tab">
-        <v-tab-item
-          v-for="item in services"
-          :key="item.tab"
-        >
+        <v-tab-item v-for="item in services" :key="item.tab">
           <template>
             <v-card>
               <v-card-title>
@@ -39,17 +30,12 @@
                 :items="shownServices"
                 :search="search"
                 hide-default-footer
-
                 :hide-default-header="$vuetify.breakpoint.xs"
               >
                 <template v-slot:item.name="{ item }">
                   <span>{{ item.name }}</span>
-                  <template
-                    v-if="item.tooltip"
-                  >
-                    <v-tooltip
-                      bottom
-                    >
+                  <template v-if="item.tooltip">
+                    <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
                         <v-icon color="primary" dark v-on="on">
                           mdi-information
@@ -73,7 +59,7 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'IndexVue',
-  data() {
+  data () {
     return {
       tab: 0,
       items: [
@@ -99,7 +85,7 @@ export default {
       ],
     };
   },
-  head() {
+  head () {
     return {
       title: 'Послуги Гніздичівської АЗПСМ',
       titleTemplate: 'Послуги Гніздичівської АЗПСМ',
@@ -116,16 +102,16 @@ export default {
     ...mapGetters([
       'services',
     ]),
-    shownServices() {
+    shownServices () {
       if (this.tab === 0) {
         return this.services.filter(({ paid }) => !paid);
-      } 
+      }
       return this.services.filter(({ paid }) => paid);
     },
-    shownHeaders() {
+    shownHeaders () {
       if (this.tab === 0) {
         return this.headers.filter(({ paid }) => !paid);
-      } 
+      }
       return this.headers;
     },
   },
@@ -133,26 +119,26 @@ export default {
 </script>
 
 <style lang="scss">
-  .service__container {
-    padding: 120px 0 50px 0;
-    min-height: 85vh;
-    display: flex;
-    justify-content: center;
+.service__container {
+  padding: 120px 0 50px 0;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
 
-    .v-data-table td {
-      padding: 0 8px;
-    }
-
-    .v-data-table__mobile-row {
-      max-width: 80vw;
-    }
-
-    .v-data-table__mobile-row__cell {
-      max-width: 50%;
-    }
-
-    .v-data-table__wrapper {
-      overflow: hidden;
-    }
+  .v-data-table td {
+    padding: 0 8px;
   }
+
+  .v-data-table__mobile-row {
+    max-width: 80vw;
+  }
+
+  .v-data-table__mobile-row__cell {
+    max-width: 50%;
+  }
+
+  .v-data-table__wrapper {
+    overflow: hidden;
+  }
+}
 </style>

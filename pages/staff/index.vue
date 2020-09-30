@@ -1,16 +1,8 @@
 <template>
   <div class="staff__wrapper">
-    <h2 class="staff__title">
-      Наша команда
-    </h2>
-    <div
-      class="staff__container"
-    >
-      <staff-item
-        v-for="member in staff"
-        :key="member.id"
-        :member="member"
-      />
+    <h2 class="staff__title">Наша команда</h2>
+    <div class="staff__container">
+      <staff-item v-for="member in staff" :key="member.id" :member="member" />
     </div>
   </div>
 </template>
@@ -24,7 +16,7 @@ export default {
   components: {
     StaffItem,
   },
-  head() {
+  head () {
     return {
       title: 'Персонал Гніздичівської АЗПСМ',
       titleTemplate: 'Персонал Гніздичівської АЗПСМ',
@@ -46,24 +38,25 @@ export default {
 </script>
 
 <style scoped>
-  .staff__wrapper {
-    padding-top: 100px;
-  }
+.staff__wrapper {
+  height: 100%;
+  padding-top: 100px;
+}
 
-  .staff__container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 66vh;
-  }
+.staff__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 66vh;
+}
 
-  .staff__title {
-    color: #4496d4;
-    font-size: 30pt;
-    font-family: open_sanslight;
-    line-height: 130%;
-    text-align: center;
-    padding: 15px;
-  }
+.staff__title {
+  color: #4496d4;
+  font-size: 30pt;
+  font-family: open_sanslight;
+  line-height: 130%;
+  text-align: center;
+  padding: 15px;
+}
 </style>
