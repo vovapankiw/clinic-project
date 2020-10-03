@@ -19,7 +19,7 @@ export const actions = {
           vueContext.commit('addData', { key, info: res.data[key] });
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => throw new Error(err));
   },
 };
 

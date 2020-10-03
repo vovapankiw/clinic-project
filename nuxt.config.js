@@ -1,10 +1,16 @@
 import colors from 'vuetify/es5/util/colors';
+import path from 'path'
+import fs from 'fs'
 
 export default {
   mode: 'universal',
-  server: {
-    port: 3000, // default: 3000
-  },
+  // server: {
+  //   port: 3000, // default: 3000
+  //   https: {
+  //     key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
+  //     cert: fs.readFileSync(path.resolve(__dirname, 'server.crt')),
+  //   },
+  // },
   /*
    ** Headers of the page
    */
@@ -63,11 +69,35 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [ '@nuxtjs/vuetify', '@nuxtjs/axios', '@nuxtjs/sitemap' ],
+  modules: [
+    '@nuxtjs/vuetify',
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/auth',
+  ],
 
   axios: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
     credentials: false,
+  },
+
+  auth: {
+    redirect: {
+      login: '/admin',
+      logout: '/admin',
+      home: '/',
+      callback: '/news',
+    },
+    strategies: {
+      google: {
+        client_id: 'XXXXXxxxx.apps.googleusercontent.com',
+      },
+      facebook: {
+        client_id: '322516785719054',
+        userinfo_endpoint: 'https://graph.facebook.com/v2.12/me?fields=about,name,picture{url},email,birthday',
+        scope: [ 'public_profile', 'email', 'user_birthday' ],
+      },
+    },
   },
 
   /*

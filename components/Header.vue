@@ -32,6 +32,9 @@
       <v-btn depressed large color="primary">
         032-48-715
       </v-btn>
+      <v-btn
+        @click="loggIn"
+      >LogIn</v-btn>
     </v-app-bar>
   </div>
 </template>
@@ -81,6 +84,9 @@ export default {
   methods: {
     showDrawer() {
       this.$emit('showDrawer');
+    },
+    loggIn() {
+      this.$router.push('/admin');
     },
   },
 };

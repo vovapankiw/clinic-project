@@ -18,6 +18,7 @@ module.exports = {
   plugins: [ 'vue' ],
   // add your custom rules here
   rules: {
+    'import/no-extraneous-dependencies': [ 'error', { devDependencies: true } ],
     semi: [ 2, 'always' ],
     quotes: [ 2, 'single', { avoidEscape: true } ],
     indent: [ 'error', 2 ],
@@ -44,7 +45,7 @@ module.exports = {
         ignorePropertyModificationsFor: [
           'state', // for vuex state
           'acc', // for reduce accumulators
-          'e', // for e.returnvalue
+          'e', // for e.return value
         ],
       },
     ],
