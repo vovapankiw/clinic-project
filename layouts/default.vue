@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import NavigationDrawer from '../components/elements/NavigationDrawer';
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
+import NavigationDrawer from '../components/elements/NavigationDrawer.vue';
 
 export default {
   components: {

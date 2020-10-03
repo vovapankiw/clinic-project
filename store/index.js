@@ -15,11 +15,8 @@ export const actions = {
   nuxtServerInit(vueContext, context) {
     return context.app.$axios.$get('/db.json')
       .then((res) => {
-        for (const key in res.data) {
-          vueContext.commit('addData', { key, info: res.data[key] });
-        }
-      })
-      .catch((err) => console.log(err));
+        Object.keys(res.data).forEach((key) => vueContext.commit('addData', { key, info: res.data[key] }));
+      });
   },
 };
 

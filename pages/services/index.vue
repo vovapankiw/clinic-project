@@ -1,18 +1,27 @@
 <template>
   <div class="service__container">
-    <v-card width="80%" height="fit-content">
+    <v-card
+      width="80%"
+      height="fit-content"
+    >
       <v-tabs
         v-model="tab"
         background-color="transparent"
         class="d-flex justify-center"
       >
-        <v-tab v-for="item in items" :key="item.tab">
+        <v-tab
+          v-for="item in items"
+          :key="item.tab"
+        >
           {{ item.tab }}
         </v-tab>
       </v-tabs>
 
       <v-tabs-items v-model="tab">
-        <v-tab-item v-for="item in services" :key="item.tab">
+        <v-tab-item
+          v-for="service in services"
+          :key="service.tab"
+        >
           <template>
             <v-card>
               <v-card-title>
@@ -32,12 +41,16 @@
                 hide-default-footer
                 :hide-default-header="$vuetify.breakpoint.xs"
               >
-                <template v-slot:item.name="{ item }">
+                <template v-slot:[`item.name`]="{ item }">
                   <span>{{ item.name }}</span>
                   <template v-if="item.tooltip">
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
-                        <v-icon color="primary" dark v-on="on">
+                        <v-icon
+                          color="primary"
+                          dark
+                          v-on="on"
+                        >
                           mdi-information
                         </v-icon>
                       </template>
@@ -55,11 +68,12 @@
 </template>
 
 <script>
+
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'IndexVue',
-  data () {
+  data() {
     return {
       tab: 0,
       items: [
@@ -85,7 +99,24 @@ export default {
       ],
     };
   },
-  head () {
+  computed: {
+    ...mapGetters([
+      'services',
+    ]),
+    shownServices() {
+      if (this.tab === 0) {
+        return this.services.filter(({ paid }) => !paid);
+      }
+      return this.services.filter(({ paid }) => paid);
+    },
+    shownHeaders() {
+      if (this.tab === 0) {
+        return this.headers.filter(({ paid }) => !paid);
+      }
+      return this.headers;
+    },
+  },
+  head() {
     return {
       title: 'Послуги Гніздичівської АЗПСМ',
       titleTemplate: 'Послуги Гніздичівської АЗПСМ',
@@ -93,27 +124,11 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Амбулаторія надає широкий спектр послуг аналізу крові, сечі, а також проводить лікування та огляд хворих',
+          content: 'Амбулаторія надає широкий спектр послуг аналізу крові, сечі, ' 
+          + 'а також проводить лікування та огляд хворих',
         },
       ],
     };
-  },
-  computed: {
-    ...mapGetters([
-      'services',
-    ]),
-    shownServices () {
-      if (this.tab === 0) {
-        return this.services.filter(({ paid }) => !paid);
-      }
-      return this.services.filter(({ paid }) => paid);
-    },
-    shownHeaders () {
-      if (this.tab === 0) {
-        return this.headers.filter(({ paid }) => !paid);
-      }
-      return this.headers;
-    },
   },
 };
 </script>

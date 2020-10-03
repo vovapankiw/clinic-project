@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import Schedule from './Schedule';
+import Schedule from './Schedule.vue';
 
 export default {
   name: 'PhotoBanner',

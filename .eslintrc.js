@@ -26,15 +26,14 @@ module.exports = {
     camelcase: 1,
     'no-console': 'warn',
     'no-mixed-spaces-and-tabs': 2,
-    'vue/max-attributes-per-line': 'off',
-    'import/extensions': [
-      'error',
-      'always',
-      {
-        js: 'never',
-        vue: 'never',
+    'vue/max-attributes-per-line': [ 'error', {
+      singleline: 1,
+      multiline: {
+        max: 1,
+        allowFirstLine: false,
       },
-    ],
+    } ],
+    'no-shadow': [ 'error', { allow: [ 'state' ] } ],
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
     'no-param-reassign': [
@@ -45,6 +44,12 @@ module.exports = {
           'state', // for vuex state
           'acc', // for reduce accumulators
           'e', // for e.returnvalue
+          'ctx',
+          'req',
+          'request',
+          'res',
+          'response',
+          '$scope',
         ],
       },
     ],
@@ -56,6 +61,7 @@ module.exports = {
       {
         code: 120,
         ignoreComments: true,
+        ignoreUrls: true,
         ignorePattern: '(\\$t\\()|(:ref=")|(class=")|(^import.*)',
       },
     ],
@@ -71,5 +77,8 @@ module.exports = {
     ],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-useless-escape': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/extensions': [ 'error', 'never', { js: 'never', vue: 'never' } ],
   },
 };

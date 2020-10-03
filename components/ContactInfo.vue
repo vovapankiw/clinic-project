@@ -1,5 +1,8 @@
 <template>
-  <v-container fluid class="contact-info__container">
+  <v-container
+    fluid
+    class="contact-info__container"
+  >
     <v-row>
       <v-col cols="12">
         <v-row
@@ -102,9 +105,7 @@ export default {
   },
   methods: {
     adaptedName(name) {
-      return name
-        .split(' ')
-        .reduce((acc, cur, idx, arr) => acc + (arr.length > 1 ? (idx === 0 ? `${cur} ` : `${cur.substring(0, 1)}.`) : ''), '');
+      return name.split(/\s+/).map((elem, i) => (i ? `${elem.substring(0, 1)}.` : elem)).join(' ');
     },
   },
 };

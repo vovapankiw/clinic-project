@@ -1,22 +1,33 @@
 <template>
   <div class="staff__wrapper">
-    <h2 class="staff__title">Наша команда</h2>
+    <h2 class="staff__title">
+      Наша команда
+    </h2>
     <div class="staff__container">
-      <staff-item v-for="member in staff" :key="member.id" :member="member" />
+      <staff-item
+        v-for="member in staff"
+        :key="member.id"
+        :member="member"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import StaffItem from '../../components/elements/StaffItem';
+import StaffItem from '../../components/elements/StaffItem.vue';
 
 export default {
   name: 'Staff',
   components: {
     StaffItem,
   },
-  head () {
+  computed: {
+    ...mapGetters([
+      'staff',
+    ]),
+  },
+  head() {
     return {
       title: 'Персонал Гніздичівської АЗПСМ',
       titleTemplate: 'Персонал Гніздичівської АЗПСМ',
@@ -24,15 +35,11 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Персонал у Гніздичівській АЗПСМ це поєднання досвіду та молодого ентузіазмуб де кожен є професіоналом своєї справи ',
+          content: 'Персонал у Гніздичівській АЗПСМ це поєднання досвіду та молодого ентузіазмуб де кожен є'
+          + 'професіоналом своєї справи ',
         },
       ],
     };
-  },
-  computed: {
-    ...mapGetters([
-      'staff',
-    ]),
   },
 };
 </script>

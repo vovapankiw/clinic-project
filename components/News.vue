@@ -18,7 +18,7 @@
 <script>
 import { mapGetters } from 'vuex';
 
-import NewsCard from './elements/NewsCard';
+import NewsCard from './elements/NewsCard.vue';
 
 export default {
   name: 'News',

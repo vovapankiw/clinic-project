@@ -9,14 +9,17 @@
     <v-list-item>
       <v-list-item-content>
         <div class="heart-rate">
-          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-               x="0px"
-               y="0px"
-               width="200px"
-               height="73px"
-               viewBox="0 0 150 73"
-               enable-background="new 0 0 150 73"
-               xml:space="preserve"
+          <svg
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="200px"
+            height="73px"
+            viewBox="0 0 150 73"
+            enable-background="new 0 0 150 73"
+            xml:space="preserve"
           >
             <polyline
               fill="none"

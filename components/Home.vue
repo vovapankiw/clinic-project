@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import PhotoBanner from '../components/elements/PhotoBanner';
+import PhotoBanner from './elements/PhotoBanner.vue';
 
 export default {
   name: 'Home',
