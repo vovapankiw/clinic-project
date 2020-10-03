@@ -10,7 +10,7 @@
       </div>
       <ul class="discovery">
         <li
-          v-for="(photo, i) in photos"
+          v-for="photo in photos"
           :key="photo.id"
         >
           <figure class="myPhoto">

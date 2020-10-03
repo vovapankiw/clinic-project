@@ -17,7 +17,7 @@
 <script>
 import { mapGetters } from 'vuex';
 
-import NewsCard from '../../components/elements/NewsCard';
+import NewsCard from '../../components/elements/NewsCard.vue';
 
 export default {
   name: 'News',
@@ -26,6 +26,11 @@ export default {
   },
   data() {
     return { };
+  },
+  computed: {
+    ...mapGetters([
+      'allNews',
+    ]),
   },
   head() {
     return {
@@ -39,11 +44,6 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    ...mapGetters([
-      'allNews',
-    ]),
   },
 };
 </script>

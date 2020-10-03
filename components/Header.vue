@@ -29,7 +29,11 @@
 
       <v-spacer />
 
-      <v-btn depressed large color="primary">
+      <v-btn
+        depressed
+        large
+        color="primary"
+      >
         032-48-715
       </v-btn>
     </v-app-bar>
@@ -37,7 +41,7 @@
 </template>
 
 <script>
-import HeaderOption from './elements/HeaderOption';
+import HeaderOption from './elements/HeaderOption.vue';
 
 export default {
   name: 'Header',

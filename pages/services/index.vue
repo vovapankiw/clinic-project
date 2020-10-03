@@ -2,7 +2,7 @@
   <div class="service__container">
     <v-card
       width="80%"
-      height="100%"
+      height="fit-content"
     >
       <v-tabs
         v-model="tab"
@@ -19,8 +19,8 @@
 
       <v-tabs-items v-model="tab">
         <v-tab-item
-          v-for="item in services"
-          :key="item.tab"
+          v-for="service in services"
+          :key="service.tab"
         >
           <template>
             <v-card>
@@ -39,19 +39,18 @@
                 :items="shownServices"
                 :search="search"
                 hide-default-footer
-
                 :hide-default-header="$vuetify.breakpoint.xs"
               >
-                <template v-slot:item.name="{ item }">
+                <template v-slot:[`item.name`]="{ item }">
                   <span>{{ item.name }}</span>
-                  <template
-                    v-if="item.tooltip"
-                  >
-                    <v-tooltip
-                      bottom
-                    >
+                  <template v-if="item.tooltip">
+                    <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
-                        <v-icon color="primary" dark v-on="on">
+                        <v-icon
+                          color="primary"
+                          dark
+                          v-on="on"
+                        >
                           mdi-information
                         </v-icon>
                       </template>
@@ -69,6 +68,7 @@
 </template>
 
 <script>
+
 import { mapGetters } from 'vuex';
 
 export default {
@@ -99,6 +99,23 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapGetters([
+      'services',
+    ]),
+    shownServices() {
+      if (this.tab === 0) {
+        return this.services.filter(({ paid }) => !paid);
+      }
+      return this.services.filter(({ paid }) => paid);
+    },
+    shownHeaders() {
+      if (this.tab === 0) {
+        return this.headers.filter(({ paid }) => !paid);
+      }
+      return this.headers;
+    },
+  },
   head() {
     return {
       title: 'Послуги Гніздичівської АЗПСМ',
@@ -107,52 +124,36 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Амбулаторія надає широкий спектр послуг аналізу крові, сечі, а також проводить лікування та огляд хворих',
+          content: 'Амбулаторія надає широкий спектр послуг аналізу крові, сечі, ' 
+          + 'а також проводить лікування та огляд хворих',
         },
       ],
     };
-  },
-  computed: {
-    ...mapGetters([
-      'services',
-    ]),
-    shownServices() {
-      if (this.tab === 0) {
-        return this.services.filter(({ paid }) => !paid);
-      } 
-      return this.services.filter(({ paid }) => paid);
-    },
-    shownHeaders() {
-      if (this.tab === 0) {
-        return this.headers.filter(({ paid }) => !paid);
-      } 
-      return this.headers;
-    },
   },
 };
 </script>
 
 <style lang="scss">
-  .service__container {
-    padding: 120px 0 50px 0;
-    min-height: 85vh;
-    display: flex;
-    justify-content: center;
+.service__container {
+  padding: 120px 0 50px 0;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
 
-    .v-data-table td {
-      padding: 0 8px;
-    }
-
-    .v-data-table__mobile-row {
-      max-width: 80vw;
-    }
-
-    .v-data-table__mobile-row__cell {
-      max-width: 50%;
-    }
-
-    .v-data-table__wrapper {
-      overflow: hidden;
-    }
+  .v-data-table td {
+    padding: 0 8px;
   }
+
+  .v-data-table__mobile-row {
+    max-width: 80vw;
+  }
+
+  .v-data-table__mobile-row__cell {
+    max-width: 50%;
+  }
+
+  .v-data-table__wrapper {
+    overflow: hidden;
+  }
+}
 </style>

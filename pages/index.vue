@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import Home from '../components/Home';
-import News from '../components/News';
-import CarePillars from '../components/CarePillars';
-import Photo from '../components/Photo';
-import PhotoBanner from '../components/elements/PhotoBanner';
+import Home from '../components/Home.vue';
+import News from '../components/News.vue';
+import CarePillars from '../components/CarePillars.vue';
+import Photo from '../components/Photo.vue';
+import PhotoBanner from '../components/elements/PhotoBanner.vue';
 
 export default {
   components: {

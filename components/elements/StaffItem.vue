@@ -17,7 +17,7 @@
     </v-row>
 
     <v-list two-line>
-      <v-list-item @click="">
+      <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">
             mdi-phone
@@ -30,7 +30,7 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-list-item @click="">
+      <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">
             mdi-briefcase
@@ -45,7 +45,7 @@
 
       <v-divider inset />
 
-      <v-list-item @click="">
+      <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">
             mdi-account-card-details
@@ -60,7 +60,7 @@
 
       <v-divider inset />
 
-      <v-list-item @click="">
+      <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">
             mdi-account-star
@@ -73,7 +73,7 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-list-item @click="">
+      <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">
             mdi-account-check

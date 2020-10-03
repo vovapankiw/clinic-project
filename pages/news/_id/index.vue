@@ -39,7 +39,7 @@
 <script>
 import { mapGetters } from 'vuex';
 
-import NewsCard from '../../../components/elements/NewsCard';
+import NewsCard from '../../../components/elements/NewsCard.vue';
 
 export default {
   name: 'IndexVue',
