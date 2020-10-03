@@ -1,11 +1,9 @@
 import axios from 'axios';
 
 class HTTP {
-  constructor(url) {
-    const baseUrl = url || process.env.BASE_URL || 'http://localhost:3000';
-    console.log('baseUrl', baseUrl);
+  constructor() {
     this.instance = axios.create({
-      url: baseUrl,
+      url: process.env.BASE_URL || 'http://localhost:3000',
     });
   }
 
